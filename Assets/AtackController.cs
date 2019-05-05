@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AtackController : MonoBehaviour {
 
-    private float moveForce = 14.0f;
+    private float moveForce = 170.0f;
 
     private Rigidbody myRigidbody;
 
