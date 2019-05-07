@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
         public void GetMyAButtonDown()
     {
         GameObject atack = Instantiate(atackPrefab) as GameObject;
-        atack.transform.position = new Vector3(this.transform.position.x + 1, this.transform.position.y, 0);
+        atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
     }
 
 
