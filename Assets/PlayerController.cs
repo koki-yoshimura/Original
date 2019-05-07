@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject atackPrefab;
 
+    GameObject director;
+
     //左ボタン押下の判定
     private bool isUButtonDown = false;
     
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        this.director = GameObject.Find("GameDirector");
 
         //Rigidbodyコンポーネントを取得（追加）
         this.myRigidbody = GetComponent<Rigidbody>();
@@ -47,7 +51,12 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    public void GetMyAButtonDown()
+    private void OnTriggerEnter(Collider other)
+    {
+        this.director.GetComponent<GameDirector>().GetCoin();
+    }
+
+        public void GetMyAButtonDown()
     {
         GameObject atack = Instantiate(atackPrefab) as GameObject;
         atack.transform.position = new Vector3(this.transform.position.x + 1, this.transform.position.y, 0);

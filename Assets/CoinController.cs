@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour {
+public class CoinController : MonoBehaviour {
 
-    public GameObject coinPrefab;
+    private float moveForce = 170.0f;
+
+    private Rigidbody myRigidbody;
 
     // Use this for initialization
     void Start () {
-		
-	}
+
+        this.myRigidbody = GetComponent<Rigidbody>();
+
+        this.myRigidbody.AddForce(-this.moveForce, 0, 0);
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +25,5 @@ public class EnemyController : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        GameObject coin = Instantiate(coinPrefab) as GameObject;
-        coin.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
     }
 }
