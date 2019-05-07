@@ -26,9 +26,7 @@ public class AtackController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Coin")
-        {
             Destroy(gameObject);
-        }
+
     }
 }

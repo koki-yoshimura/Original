@@ -24,6 +24,9 @@ public class CoinController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.tag == "test")
+        {
+            Destroy(gameObject);
+        }
     }
 }
