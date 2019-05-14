@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinController : MonoBehaviour {
 
-    private float moveForce = 170.0f;
+    private float moveForce = 100.0f;//Coinの移動速度
 
     private Rigidbody myRigidbody;
 
@@ -13,16 +13,20 @@ public class CoinController : MonoBehaviour {
 
         this.myRigidbody = GetComponent<Rigidbody>();
 
-        this.myRigidbody.AddForce(-this.moveForce, 0, 0);
+        this.myRigidbody.AddForce(-this.moveForce, 0, 0);//Coinの移動処理
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (-9 >= this.transform.position.x)//Coinが画面外に出たら削除する
+        {
+            Destroy(gameObject);
+        }
 
-    private void OnTriggerEnter(Collider other)
+    }
+
+    private void OnTriggerEnter(Collider other)//Playerに当たった時に削除する
     {
         if (other.gameObject.tag == "test")
         {

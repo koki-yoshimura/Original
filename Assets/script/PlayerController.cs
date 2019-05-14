@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    //プレイヤーを移動させるコンポーネントを入れる
+    
     private Rigidbody myRigidbody;
 
-    //上下に移動するための力
-    private float moveForce = 14.0f;
+    private float moveForce = 14.0f; //上下に移動するための力
 
     public GameObject atackPrefab;
 
     GameObject director;
-
-    //左ボタン押下の判定
-    private bool isUButtonDown = false;
     
-    //右ボタン押下の判定
-    private bool isDButtonDown = false;
+    private bool isUButtonDown = false;//左ボタン押下の判定
+    
+    private bool isDButtonDown = false;//右ボタン押下の判定
 
 
 
@@ -28,35 +25,33 @@ public class PlayerController : MonoBehaviour {
 
         this.director = GameObject.Find("GameDirector");
 
-        //Rigidbodyコンポーネントを取得（追加）
         this.myRigidbody = GetComponent<Rigidbody>();
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-        //プレイヤーを矢印キーまたはボタンに応じて上下に移動させる
-        if (this.isUButtonDown)
-        {
-            //上に移動
-            this.myRigidbody.AddForce(0, this.moveForce, 0);
-        }
-        else if (this.isDButtonDown)
-        {
-            //下に移動
-            this.myRigidbody.AddForce(0, -this.moveForce, 0);
-        }
-
-
+            //プレイヤーを矢印キーまたはボタンに応じて上下に移動させる
+            if (this.isUButtonDown)
+            {
+                //上に移動
+                this.myRigidbody.AddForce(0, this.moveForce, 0);
+            }
+            else if (this.isDButtonDown)
+            {
+                //下に移動
+                this.myRigidbody.AddForce(0, -this.moveForce, 0);
+            }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)//PlayerがCoinに当たった時に加算処理を呼び出す
     {
-        this.director.GetComponent<GameDirector>().GetCoin();
+        if (other.gameObject.tag == "Coin")
+        {
+            this.director.GetComponent<GameDirector>().GetCoin();
+        }
     }
 
-        public void GetMyAButtonDown()
+        public void GetMyAButtonDown()//発射ボタンを押した際に弾を生成する
     {
         GameObject atack = Instantiate(atackPrefab) as GameObject;
         atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
