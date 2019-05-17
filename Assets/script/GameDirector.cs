@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour {
+
+    public static bool IsClear;
+
+    float remainingTime = 60.0f;
 
     GameObject coinText;
 
@@ -21,6 +26,17 @@ public class GameDirector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.coinText.GetComponent<Text>().text = this.coin.ToString() + " コイン";//加算したCoinの数を画面に表示する
+
+        remainingTime -= Time.deltaTime;
+
+        if (remainingTime <= 0)
+        {
+            IsClear = false;
+            SceneManager.LoadScene("rizaruto");
+        }
+
+
+
+            this.coinText.GetComponent<Text>().text = this.coin.ToString() + " コイン";//加算したCoinの数を画面に表示する
     }
 }

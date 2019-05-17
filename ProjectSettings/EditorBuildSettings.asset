@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/shooting.unity
+    guid: b689ba7a5064d83469f805bafcd4f68e
+  - enabled: 1
+    path: Assets/rizaruto.unity
+    guid: 703fd8ad141ba71438d80a950f1c7f3c
