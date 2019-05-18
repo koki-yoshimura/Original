@@ -43,11 +43,15 @@ public class PlayerController : MonoBehaviour {
             }
     }
 
-    private void OnTriggerEnter(Collider other)//PlayerがCoinに当たった時に加算処理を呼び出す
+    private void OnTriggerEnter(Collider other)//PlayerがCoinに当たった時に加算処理、Enemyに当たった時に減算処理を呼び出す
     {
         if (other.gameObject.tag == "Coin")
         {
             this.director.GetComponent<GameDirector>().GetCoin();
+        }
+        else if(other.gameObject.tag == "Enemy")
+        {
+            this.director.GetComponent<GameDirector>().Damage();
         }
     }
 

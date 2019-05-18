@@ -20,6 +20,7 @@ public class rizarutoController : MonoBehaviour {
         if (GameDirector.IsClear == true)
         {
             // クリアしたときの処理
+            this.rizaruto.GetComponent<Text>().text = "Clear";
         }
         else
         {
