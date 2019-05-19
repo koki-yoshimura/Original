@@ -39,6 +39,7 @@ public class GameDirector : MonoBehaviour {
 
         remainingTime -= Time.deltaTime;
 
+        //クリア、ゲームオーバーの判定
         if (remainingTime <= 0)
         {
             IsClear = true;
