@@ -30,6 +30,7 @@ public class ShopController : MonoBehaviour {
         else if (Input.GetMouseButtonUp(0))
         {
             Vector3 EndPos = Input.mousePosition;
+
         }
 		
 
