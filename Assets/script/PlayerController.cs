@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "Coin")
         {
             this.director.GetComponent<GameDirector>().GetCoin();
+
         }
         else if(other.gameObject.tag == "Enemy")
         {

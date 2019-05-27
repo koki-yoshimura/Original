@@ -40,6 +40,7 @@ public class ShopController : MonoBehaviour {
     public void GetMyOneButtonDown()
     {
         this.OneButtonDown = true;
+        Debug.Log(1);
     }
 
     //1ボタンを離した場合の処理
@@ -52,6 +53,7 @@ public class ShopController : MonoBehaviour {
     public void GetMyTwoButtonDown()
     {
         this.TwoButtonDown = true;
+        Debug.Log(2);
     }
 
     //2ボタンを離した場合の処理
@@ -64,6 +66,7 @@ public class ShopController : MonoBehaviour {
     public void GetMyThreeButtonDown()
     {
         this.ThreeButtonDown = true;
+        Debug.Log(3);
     }
 
     //3ボタンを離した場合の処理
@@ -76,6 +79,7 @@ public class ShopController : MonoBehaviour {
     public void GetMyFourButtonDown()
     {
         this.FourButtonDown = true;
+        Debug.Log(4);
     }
 
     //4ボタンを離した場合の処理
@@ -88,6 +92,7 @@ public class ShopController : MonoBehaviour {
     public void GetMyFiveButtonDown()
     {
         this.FiveButtonDown = true;
+        Debug.Log(5);
     }
 
     //5ボタンを離した場合の処理
