@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class rizarutoController : MonoBehaviour {
 
@@ -28,5 +29,10 @@ public class rizarutoController : MonoBehaviour {
             this.rizaruto.GetComponent<Text>().text = "Game Over";
         }
 
+    }
+
+    public void TitleButtonDown()
+    {
+        SceneManager.LoadScene("title");
     }
 }
