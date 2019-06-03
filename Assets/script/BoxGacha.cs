@@ -16,6 +16,16 @@ public class BoxGacha : MonoBehaviour
 
         int i = Random.Range(0, m_gachaItems.Count);
         Debug.Log(m_gachaItems[i] + "を引きました");
-        m_gachaItems.RemoveAt(i);   // 消す
+
+        string destroy = m_gachaItems[i];
+
+        for (int y = 0; y < m_gachaItems.Count; y++)
+        {
+            if (destroy == m_gachaItems[y])
+            {
+                m_gachaItems.RemoveAt(y);   // 消す
+                y -= 1;
+            }
+        }
     }
 }
