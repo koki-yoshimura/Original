@@ -33,7 +33,7 @@ public class TitleController : MonoBehaviour {
     //2ボタンを押し続けた場合の処理
     public void ShootingButtonDown()
     {
-        SceneManager.LoadScene("shooting");
+        SceneManager.LoadScene("soubi");
     }
 
     //3ボタンを押し続けた場合の処理

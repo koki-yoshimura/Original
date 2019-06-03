@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopController : MonoBehaviour {
 
+    GameObject shojicoin;
+
     // Use this for initialization
     void Start () {
+        this.shojicoin = GameObject.Find("ShojiCoin");
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        this.shojicoin.GetComponent<Text>().text = "所持コイン " + GameDirector.savecoin;
 	}
 
     //1ボタンを押し続けた場合の処理
