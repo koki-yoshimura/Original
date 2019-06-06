@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShopController : MonoBehaviour {
 
     GameObject shojicoin;
+    GameObject panel;
+
 
     // Use this for initialization
     void Start () {
         this.shojicoin = GameObject.Find("ShojiCoin");
-		
-	}
+		this.panel = GameObject.Find("Panel");
+        panel.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -67,5 +71,10 @@ public class ShopController : MonoBehaviour {
             Debug.Log(1);
             GameDirector.savecoin -= 5;
         }
+    }
+
+    public void ReturnButtonDown()
+    {
+        SceneManager.LoadScene("title");
     }
 }
