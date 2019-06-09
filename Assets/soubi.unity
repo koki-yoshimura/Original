@@ -345,7 +345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &151058881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -404,13 +404,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 771289249}
   toggleTransition: 1
   graphic: {fileID: 1098102595}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 169088820}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 169088821}
+        m_MethodName: OnValueChanged
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 151058882}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &168395482
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169088819}
   - component: {fileID: 169088820}
+  - component: {fileID: 169088821}
   m_Layer: 5
   m_Name: GroupA
   m_TagString: Untagged
@@ -580,7 +592,18 @@ MonoBehaviour:
   m_Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 1
+  m_AllowSwitchOff: 0
+--- !u!114 &169088821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 169088818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9ef5b6cf9634e4ba5c589f4a83e1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &174057502
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &174057503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -909,10 +932,21 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 874105052}
   toggleTransition: 1
   graphic: {fileID: 520921858}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 169088820}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 169088821}
+        m_MethodName: OnValueChanged
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 278659643}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
@@ -993,7 +1027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &410791635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1052,13 +1086,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1040213493}
   toggleTransition: 1
   graphic: {fileID: 138069979}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1792659634}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1792659635}
+        m_MethodName: OnValueChanged
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 410791636}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &520921856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1978,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf7837b3acb6514ebc4e577d3e4e112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoubiB: {fileID: 1745458461}
+  SoubiBButton: {fileID: 1978944697}
+  SoubiC: {fileID: 151058880}
+  SoubiCButton: {fileID: 1344637767}
+  SoubiE: {fileID: 410791634}
+  SoubiEButton: {fileID: 174057502}
+  SoubiF: {fileID: 1336753895}
+  SoubiFButton: {fileID: 1887089107}
 --- !u!4 &1168239249
 Transform:
   m_ObjectHideFlags: 0
@@ -2020,10 +2073,21 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1054268400}
   toggleTransition: 1
   graphic: {fileID: 54794634}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1792659634}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1792659635}
+        m_MethodName: OnValueChanged
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1202022490}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
@@ -2116,7 +2180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1336753896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2175,13 +2239,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 930099092}
   toggleTransition: 1
   graphic: {fileID: 683816932}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1792659634}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1792659635}
+        m_MethodName: OnValueChanged
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1336753897}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1344637767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1344637768
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2535,7 +2610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1745458462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2594,13 +2669,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1716109039}
   toggleTransition: 1
   graphic: {fileID: 215993315}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 169088820}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 169088821}
+        m_MethodName: OnValueChanged
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1745458463}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1792659632
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792659633}
   - component: {fileID: 1792659634}
+  - component: {fileID: 1792659635}
   m_Layer: 5
   m_Name: GroupB
   m_TagString: Untagged
@@ -2649,7 +2736,18 @@ MonoBehaviour:
   m_Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 1
+  m_AllowSwitchOff: 0
+--- !u!114 &1792659635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1792659632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9ef5b6cf9634e4ba5c589f4a83e1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1837038989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,7 +2839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1887089108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2936,7 +3034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1978944698
 RectTransform:
   m_ObjectHideFlags: 0

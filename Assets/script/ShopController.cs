@@ -9,6 +9,11 @@ public class ShopController : MonoBehaviour {
     GameObject shojicoin;
     GameObject panel;
 
+    public static int shopbuyB = 0;
+    public static int shopbuyC = 0;
+    public static int shopbuyE = 0;
+    public static int shopbuyF = 0;
+
 
     // Use this for initialization
     void Start () {
@@ -27,7 +32,7 @@ public class ShopController : MonoBehaviour {
     {
         if(GameDirector.savecoin >= 1)
         {
-            Debug.Log(1);
+            shopbuyB += 1;
             GameDirector.savecoin -= 1;
         }
 
@@ -38,7 +43,7 @@ public class ShopController : MonoBehaviour {
     {
         if (GameDirector.savecoin >= 2)
         {
-            Debug.Log(1);
+            shopbuyC += 1;
             GameDirector.savecoin -= 2;
         }
     }
@@ -48,7 +53,7 @@ public class ShopController : MonoBehaviour {
     {
         if (GameDirector.savecoin >= 3)
         {
-            Debug.Log(1);
+            shopbuyE += 1;
             GameDirector.savecoin -= 3;
         }
     }
@@ -58,7 +63,7 @@ public class ShopController : MonoBehaviour {
     {
         if (GameDirector.savecoin >= 4)
         {
-            Debug.Log(1);
+            shopbuyF += 1;
             GameDirector.savecoin -= 4;
         }
     }
@@ -68,7 +73,7 @@ public class ShopController : MonoBehaviour {
     {
         if (GameDirector.savecoin >= 5)
         {
-            Debug.Log(1);
+            shopbuyE += 1;
             GameDirector.savecoin -= 5;
         }
     }
