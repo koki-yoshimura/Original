@@ -8,6 +8,10 @@ TagManager:
   - Coin
   - Atack
   - Enemy
+  - toggleA
+  - toggleB
+  - toggleD
+  - toggleE
   layers:
   - Default
   - TransparentFX
