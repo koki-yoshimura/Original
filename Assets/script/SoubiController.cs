@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class SoubiController : MonoBehaviour {
 
+    //playerに装備する装備
+    public static int SoubiA = 0;
+    public static int SoubiB = 0;
+    public static int SoubiC = 0;
+
+    //playerに装備する攻撃
+    public static int SoubiD = 0;
+    public static int SoubiE = 0;
+    public static int SoubiF = 0;
+
+
     // Use this for initialization
     void Start () {
 		
@@ -24,6 +35,40 @@ public class SoubiController : MonoBehaviour {
             message += toggle.name;
             message += " にチェックが入った";
             Debug.Log(message);
+        }
+    }
+
+    public void SoubiAbuttondown(UnityEngine.UI.Toggle toggle)
+    {
+        if (toggle.isOn)
+        {
+            SoubiA += 1;
+        }
+    }
+
+    public void SoubiBbuttondown(UnityEngine.UI.Toggle toggle)
+    {
+        if (toggle.isOn)
+        {
+            SoubiB += 1;
+        }
+    }
+
+    public void SoubiDbuttondown(UnityEngine.UI.Toggle toggle)
+    {
+        if (toggle.isOn)
+        {
+            SoubiD += 1;
+            SoubiE -= 1;
+        }
+    }
+
+    public void SoubiEbuttondown(UnityEngine.UI.Toggle toggle)
+    {
+        if (toggle.isOn)
+        {
+            SoubiE += 1;
+            SoubiD -= 1;
         }
     }
 }

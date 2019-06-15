@@ -11,8 +11,6 @@ public class ShopController : MonoBehaviour {
 
     public static int shopbuyB = 0;
     public static int shopbuyC = 0;
-    public static int shopbuyE = 0;
-    public static int shopbuyF = 0;
 
 
     // Use this for initialization
@@ -32,8 +30,10 @@ public class ShopController : MonoBehaviour {
     {
         if(GameDirector.savecoin >= 1)
         {
+            //装備画面にボタン表示
             shopbuyB += 1;
             GameDirector.savecoin -= 1;
+            Debug.Log("B購入");
         }
 
     }
@@ -43,41 +43,15 @@ public class ShopController : MonoBehaviour {
     {
         if (GameDirector.savecoin >= 2)
         {
+            //装備画面にボタン表示
             shopbuyC += 1;
             GameDirector.savecoin -= 2;
+            Debug.Log("C購入");
         }
     }
 
-    //3ボタンを押し続けた場合の処理
-    public void GetMyThreeButtonDown()
-    {
-        if (GameDirector.savecoin >= 3)
-        {
-            shopbuyE += 1;
-            GameDirector.savecoin -= 3;
-        }
-    }
 
-    //4ボタンを押し続けた場合の処理
-    public void GetMyFourButtonDown()
-    {
-        if (GameDirector.savecoin >= 4)
-        {
-            shopbuyF += 1;
-            GameDirector.savecoin -= 4;
-        }
-    }
-
-    //5ボタンを押し続けた場合の処理
-    public void GetMyFiveButtonDown()
-    {
-        if (GameDirector.savecoin >= 5)
-        {
-            shopbuyE += 1;
-            GameDirector.savecoin -= 5;
-        }
-    }
-
+    //戻るボタンを押すとタイトルに遷移する
     public void ReturnButtonDown()
     {
         SceneManager.LoadScene("title");

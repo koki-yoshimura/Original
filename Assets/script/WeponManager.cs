@@ -17,6 +17,7 @@ public class WeponManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        //ショップで購入したボタン、チェックボックスが装備画面に表示されるようにしている
         if (ShopController.shopbuyB == 1)
         {
             SoubiB.SetActive(true);
@@ -29,13 +30,14 @@ public class WeponManager : MonoBehaviour {
             SoubiCButton.SetActive(true);
         }
 
-        if (ShopController.shopbuyE == 1)
+        //ガシャで手に入れたボタン、チェックボックスが装備画面に表示されるようにしている
+        if (BoxGacha.GashaE == 1)
         {
             SoubiE.SetActive(true);
             SoubiEButton.SetActive(true);
         }
 
-        if (ShopController.shopbuyF == 1)
+        if (BoxGacha.GashaF == 1)
         {
             SoubiF.SetActive(true);
             SoubiFButton.SetActive(true);
@@ -48,6 +50,7 @@ public class WeponManager : MonoBehaviour {
 		
 	}
 
+    //スタートボタンを押すとシューティングゲームが始まる
     public void StartButtonDown()
     {
         SceneManager.LoadScene("shooting");

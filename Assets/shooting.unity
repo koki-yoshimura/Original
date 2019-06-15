@@ -1003,7 +1003,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040ec35dc7b9a1543aab951ec3827fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1: {fileID: 1596439925}
+  player2: {fileID: 1194333261}
   atackPrefab: {fileID: 1594543685542878, guid: e9891171a4ce11c449dadf42fb10c00b,
+    type: 2}
+  atackPrefab2: {fileID: 1020520078025182, guid: f1a996a554fcf1b4aad041e0e2037efc,
     type: 2}
 --- !u!1 &1759841656
 GameObject:

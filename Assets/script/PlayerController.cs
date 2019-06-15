@@ -9,9 +9,15 @@ public class PlayerController : MonoBehaviour {
 
     private float moveForce = 14.0f; //上下に移動するための力
 
+    public GameObject player1;
+
+    public GameObject player2;
+
     public GameObject atackPrefab;
 
-    GameObject director;
+    public GameObject atackPrefab2;
+
+　 GameObject director;
     
     private bool isUButtonDown = false;//左ボタン押下の判定
     
@@ -22,6 +28,19 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        //装備画面にて押されたチェックボックスによって装備が切り替わる
+        if (SoubiController.SoubiA == 1)
+        {
+            player1.SetActive(true);
+            player2.SetActive(false);
+        }
+
+        if (SoubiController.SoubiB == 1)
+        {
+            player1.SetActive(false);
+            player2.SetActive(true);
+        }
 
         this.director = GameObject.Find("GameDirector");
 
@@ -58,8 +77,19 @@ public class PlayerController : MonoBehaviour {
 
         public void GetMyAButtonDown()//発射ボタンを押した際に弾を生成する
     {
-        GameObject atack = Instantiate(atackPrefab) as GameObject;
-        atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
+
+        //装備画面にて押されたチェックボックスによって攻撃が切り替わる
+        if (SoubiController.SoubiD == 1)
+        {
+            GameObject atack = Instantiate(atackPrefab) as GameObject;
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
+        }
+
+        if (SoubiController.SoubiE == 1)
+        {
+            GameObject atack = Instantiate(atackPrefab2) as GameObject;
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
+        }
     }
 
 
