@@ -20,7 +20,7 @@ public class TitleController : MonoBehaviour {
 		
 	}
 
-    //1ボタンを押し続けた場合の処理
+    //スタートボタンを押すと非アクティブのボタンがアクティブとなる
     public void StartButtonDown()
     {
         StartButton.SetActive(false);
@@ -30,19 +30,19 @@ public class TitleController : MonoBehaviour {
 
     }
 
-    //2ボタンを押し続けた場合の処理
+    //soubiボタンを押してsoubiシーンに遷移する
     public void ShootingButtonDown()
     {
         SceneManager.LoadScene("soubi");
     }
 
-    //3ボタンを押し続けた場合の処理
+    //shopボタンを押してshopシーンに遷移する
     public void ShopButtonDown()
     {
         SceneManager.LoadScene("shop");
     }
 
-    //4ボタンを押し続けた場合の処理
+    //gashaボタンを押してgashaシーンに遷移する
     public void GashaButtonDown()
     {
         SceneManager.LoadScene("gasha");
