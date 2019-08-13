@@ -18,13 +18,13 @@ public class WeponManager : MonoBehaviour {
     void Start () {
 
         //ショップで購入したボタン、チェックボックスが装備画面に表示されるようにしている
-        if (ShopController.shopbuyB == 1)
+        if (ShopController.shopbuy1 == 1)
         {
             SoubiB.SetActive(true);
             SoubiBButton.SetActive(true);
         }
 
-        if (ShopController.shopbuyC == 1)
+        if (ShopController.shopbuy2 == 1)
         {
             SoubiC.SetActive(true);
             SoubiCButton.SetActive(true);

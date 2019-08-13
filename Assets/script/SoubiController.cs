@@ -22,30 +22,7 @@ public class SoubiController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (toggle.isOn)
-        {
-            if (toggle.gameObject.tag == "toggleA")
-            {
-                SoubiA += 1;
-                SoubiB = 0;
-            }
-            else if (toggle.gameObject.tag == "toggleB")
-            {
-                SoubiB += 1;
-                SoubiA = 0;
-            }
-            else if (toggle.gameObject.tag == "toggleD")
-            {
-                SoubiC += 1;
-                SoubiD = 0;
-            }
-            else if (toggle.gameObject.tag == "toggleE")
-            {
-                SoubiD += 1;
-                SoubiC = 0;
-            }
 
-        }
 
     }
 
