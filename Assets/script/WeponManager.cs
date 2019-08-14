@@ -31,13 +31,13 @@ public class WeponManager : MonoBehaviour {
         }
 
         //ガシャで手に入れたボタン、チェックボックスが装備画面に表示されるようにしている
-        if (BoxGacha.GashaE == 1)
+        if (BoxGacha.Gasha1 == 1)
         {
             SoubiE.SetActive(true);
             SoubiEButton.SetActive(true);
         }
 
-        if (BoxGacha.GashaF == 1)
+        if (BoxGacha.Gasha2 == 1)
         {
             SoubiF.SetActive(true);
             SoubiFButton.SetActive(true);
