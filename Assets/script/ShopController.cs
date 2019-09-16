@@ -8,8 +8,6 @@ public class ShopController : MonoBehaviour {
 
     GameObject shojicoin;
 
-    int coin = 100;
-
     int itemkanri = 0;
 
     public GameObject Panel;
@@ -20,11 +18,16 @@ public class ShopController : MonoBehaviour {
     public GameObject tarinaiText;
     public GameObject susumuButton;
     public GameObject BuyText;
+    public GameObject tutorialText;
+    public GameObject XButton;
     public GameObject Button1;
     public GameObject Button2;
     public GameObject Button3;
     public GameObject Button4;
     public GameObject Button5;
+    public GameObject questiontext;
+
+
 
     //装備画面に購入情報を伝える変数
     public static int shopbuy1 = 0;
@@ -38,12 +41,20 @@ public class ShopController : MonoBehaviour {
     void Start () {
         this.shojicoin = GameObject.Find("ShojiCoin");
 
+        if (SaveManager.shokaishop == 0)
+        {
+            Panel.SetActive(true);
+            TextPanel.SetActive(true);
+            tutorialText.SetActive(true);
+            XButton.SetActive(true);
+        }
+
     }
 
     //GameDirector.savecoin
     void Update()
     {
-        this.shojicoin.GetComponent<Text>().text = "所持コイン " + coin;
+        this.shojicoin.GetComponent<Text>().text = "所持コイン " + GameDirector.savecoin;
 
         if (shopbuy1 != 0)
            Button1.SetActive(false);
@@ -71,6 +82,7 @@ public class ShopController : MonoBehaviour {
         TextPanel.SetActive(true);
         BuyButton.SetActive(true);
         CancelButton.SetActive(true);
+        questiontext.SetActive(true);
 
         itemkanri = 1;
     }
@@ -84,6 +96,7 @@ public class ShopController : MonoBehaviour {
         TextPanel.SetActive(true);
         BuyButton.SetActive(true);
         CancelButton.SetActive(true);
+        questiontext.SetActive(true);
 
         itemkanri = 2;
     }
@@ -97,6 +110,7 @@ public class ShopController : MonoBehaviour {
         TextPanel.SetActive(true);
         BuyButton.SetActive(true);
         CancelButton.SetActive(true);
+        questiontext.SetActive(true);
 
         itemkanri = 3;
     }
@@ -110,6 +124,7 @@ public class ShopController : MonoBehaviour {
         TextPanel.SetActive(true);
         BuyButton.SetActive(true);
         CancelButton.SetActive(true);
+        questiontext.SetActive(true);
 
         itemkanri = 4;
     }    
@@ -123,6 +138,7 @@ public class ShopController : MonoBehaviour {
         TextPanel.SetActive(true);
         BuyButton.SetActive(true);
         CancelButton.SetActive(true);
+        questiontext.SetActive(true);
 
         itemkanri = 5;
     }
@@ -135,16 +151,17 @@ public class ShopController : MonoBehaviour {
         switch (itemkanri)
         {
             case 1:
-                if (coin >= 10)
+                if (GameDirector.savecoin >= 10)
                 {
                     shopbuy1 = 1;
-                    coin -= 1;
+                    GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
                     BuyText.SetActive(true);
                     susumuButton.SetActive(true);
                     BuyButton.SetActive(false);
                     CancelButton.SetActive(false);
+                    questiontext.SetActive(false);
 
                 }
                 else
@@ -155,16 +172,17 @@ public class ShopController : MonoBehaviour {
                 break;
 
             case 2:
-                if (coin >= 10)
+                if (GameDirector.savecoin >= 10)
                 {
                     shopbuy2 = 1;
-                    coin -= 1;
+                    GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
                     BuyText.SetActive(true);
                     susumuButton.SetActive(true);
                     BuyButton.SetActive(false);
                     CancelButton.SetActive(false);
+                    questiontext.SetActive(false);
                 }
                 else
                 {
@@ -174,16 +192,17 @@ public class ShopController : MonoBehaviour {
                 break;
 
             case 3:
-                if (coin >= 10)
+                if (GameDirector.savecoin >= 10)
                 {
                     shopbuy3 = 1;
-                    coin -= 1;
+                    GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
                     BuyText.SetActive(true);
                     susumuButton.SetActive(true);
                     BuyButton.SetActive(false);
                     CancelButton.SetActive(false);
+                    questiontext.SetActive(false);
                 }
                 else
                 {
@@ -193,16 +212,17 @@ public class ShopController : MonoBehaviour {
                 break;
 
             case 4:
-                if (coin >= 10)
+                if (GameDirector.savecoin >= 10)
                 {
                     shopbuy4 = 1;
-                    coin -= 1;
+                    GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
                     BuyText.SetActive(true);
                     susumuButton.SetActive(true);
                     BuyButton.SetActive(false);
                     CancelButton.SetActive(false);
+                    questiontext.SetActive(false);
                 }
                 else
                 {
@@ -212,16 +232,17 @@ public class ShopController : MonoBehaviour {
                 break;
 
             case 5:
-                if (coin >= 10)
+                if (GameDirector.savecoin >= 10)
                 {
                     shopbuy5 = 1;
-                    coin -= 1;
+                    GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
                     BuyText.SetActive(true);
                     susumuButton.SetActive(true);
                     BuyButton.SetActive(false);
                     CancelButton.SetActive(false);
+                    questiontext.SetActive(false);
                 }
                 else
                 {
@@ -244,6 +265,9 @@ public class ShopController : MonoBehaviour {
         CancelButton.SetActive(false);
         tarinaiPanel.SetActive(false);
         tarinaiText.SetActive(false);
+        questiontext.SetActive(false);
+
+
 
     }
 
@@ -255,7 +279,19 @@ public class ShopController : MonoBehaviour {
         susumuButton.SetActive(false);
         tarinaiPanel.SetActive(false);
         BuyText.SetActive(false);
+        questiontext.SetActive(false);
 
+    }
+
+    public void XButtonDown()
+    {
+        GetComponent<AudioSource>().Play();
+        Panel.SetActive(false);
+        TextPanel.SetActive(false);
+        tutorialText.SetActive(false);
+        XButton.SetActive(false);
+
+        SaveManager.shokaishop = 1;
     }
 
     //戻るボタンを押すとタイトルに遷移する
