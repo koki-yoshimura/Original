@@ -5,46 +5,54 @@ using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
 
-    public GameObject StartButton;
-    public GameObject ShopButton;
-    public GameObject GashaButton;
-    public GameObject ShootingButton;
+    [SerializeField] private AudioSource audioSource;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject shopButton;
+    [SerializeField] private GameObject gashaButton;
+    [SerializeField] private GameObject shootingButton;
+    [SerializeField] private GameObject title;
+    [SerializeField] private GameObject tutorialpanel;
 
-    //スタートボタンを押すと非アクティブのボタンがアクティブとなる
     public void StartButtonDown()
     {
-        StartButton.SetActive(false);
-        ShopButton.SetActive(true);
-        GashaButton.SetActive(true);
-        ShootingButton.SetActive(true);
+        audioSource.Play();
 
+        startButton.SetActive(false);
+        title.SetActive(false);
+        shopButton.SetActive(true);
+        gashaButton.SetActive(true);
+        shootingButton.SetActive(true);
+
+        if (SaveManager.shokaititle == 0)
+        {
+            tutorialpanel.SetActive(true);
+        }
     }
 
-    //soubiボタンを押してsoubiシーンに遷移する
     public void ShootingButtonDown()
     {
+        audioSource.Play();
         SceneManager.LoadScene("soubi");
     }
 
-    //shopボタンを押してshopシーンに遷移する
     public void ShopButtonDown()
     {
+        audioSource.Play();
         SceneManager.LoadScene("shop");
     }
 
-    //gashaボタンを押してgashaシーンに遷移する
     public void GashaButtonDown()
     {
+        audioSource.Play();
         SceneManager.LoadScene("gasha");
+    }
+
+    public void XButtonDown()
+    {
+        audioSource.Play();
+        tutorialpanel.SetActive(false);
+
+        SaveManager.shokaititle = 1;
     }
 }

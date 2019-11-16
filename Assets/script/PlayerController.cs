@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -13,11 +14,24 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject player2;
 
+    public GameObject player3;
+
+    public GameObject player4;
+
     public GameObject atackPrefab;
 
     public GameObject atackPrefab2;
 
-　 GameObject director;
+    public GameObject atackPrefab3;
+
+    public GameObject atackPrefab4;
+
+    public GameObject atackPrefab5;
+
+    public GameObject atackPrefab6;
+
+
+    GameObject director;
     
     private bool isUButtonDown = false;//左ボタン押下の判定
     
@@ -26,20 +40,41 @@ public class PlayerController : MonoBehaviour {
 
 
 
+
     // Use this for initialization
     void Start () {
 
         //装備画面にて押されたチェックボックスによって装備が切り替わる
-        if (SoubiController.SoubiA == 1)
+        if (WeponManager.SoubiA == 1)
         {
             player1.SetActive(true);
             player2.SetActive(false);
+            player3.SetActive(false);
+            player4.SetActive(false);
         }
 
-        if (SoubiController.SoubiB == 1)
+        if (WeponManager.SoubiB == 1)
         {
             player1.SetActive(false);
             player2.SetActive(true);
+            player3.SetActive(false);
+            player4.SetActive(false);
+        }
+
+        if (WeponManager.SoubiC == 1)
+        {
+            player1.SetActive(false);
+            player2.SetActive(false);
+            player3.SetActive(true);
+            player4.SetActive(false);
+        }
+
+        if (WeponManager.SoubiD == 1)
+        {
+            player1.SetActive(false);
+            player2.SetActive(false);
+            player3.SetActive(false);
+            player4.SetActive(true);
         }
 
         this.director = GameObject.Find("GameDirector");
@@ -77,18 +112,43 @@ public class PlayerController : MonoBehaviour {
 
         public void GetMyAButtonDown()//発射ボタンを押した際に弾を生成する
     {
+        GetComponent<AudioSource>().Play();
 
         //装備画面にて押されたチェックボックスによって攻撃が切り替わる
-        if (SoubiController.SoubiD == 1)
+        if (WeponManager.SoubiE == 1)
         {
             GameObject atack = Instantiate(atackPrefab) as GameObject;
-            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
 
-        if (SoubiController.SoubiE == 1)
+        if (WeponManager.SoubiF == 1)
         {
             GameObject atack = Instantiate(atackPrefab2) as GameObject;
-            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y, 0);
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
+        }
+
+        if (WeponManager.SoubiG == 1)
+        {
+            GameObject atack = Instantiate(atackPrefab3) as GameObject;
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
+        }
+
+        if (WeponManager.SoubiH == 1)
+        {
+            GameObject atack = Instantiate(atackPrefab4) as GameObject;
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
+        }
+
+        if (WeponManager.SoubiI == 1)
+        {
+            GameObject atack = Instantiate(atackPrefab5) as GameObject;
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
+        }
+
+        if (WeponManager.SoubiJ == 1)
+        {
+            GameObject atack = Instantiate(atackPrefab6) as GameObject;
+            atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
     }
 

@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)//Playerに撃破された時にCoinを表示する
     {
+
         if (other.gameObject.tag == "Atack")
         {
             Destroy(gameObject);
