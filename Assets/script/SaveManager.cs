@@ -14,6 +14,7 @@ public class SaveManager : MonoBehaviour {
 
     void Awake()
     {
+        PlayerPrefs.DeleteKey("kidokutitle");
         if (instance == null)//タイトルに来るたびに複数の同じゲームオブジェクトが存在することにならないようにinstanceの中身がないときだけ実施している
         {
             instance = this;
