@@ -34,11 +34,6 @@ public class rizarutoController : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void Update () {
-
-    }
-
     public void TitleButtonDown()
     {
         SceneManager.LoadScene("title");

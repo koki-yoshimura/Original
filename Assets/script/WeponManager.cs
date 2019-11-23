@@ -7,20 +7,22 @@ using System.Linq;
 
 public class WeponManager : MonoBehaviour {
 
-    public GameObject Panel;
-    public GameObject TextPanel;
-    public GameObject tutorialText;
-    public GameObject XButton;
+    [SerializeField] private AudioSource audioSource;
 
-    public GameObject gasha1;
-    public GameObject gasha2;
-    public GameObject gasha3;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject textPanel;
+    [SerializeField] private GameObject tutorialText;
+    [SerializeField] private GameObject xButton;
 
-    public GameObject shop1;
-    public GameObject shop2;
-    public GameObject shop3;
-    public GameObject shop4;
-    public GameObject shop5;
+    [SerializeField] private GameObject gasha1;
+    [SerializeField] private GameObject gasha2;
+    [SerializeField] private GameObject gasha3;
+
+    [SerializeField] private GameObject shop1;
+    [SerializeField] private GameObject shop2;
+    [SerializeField] private GameObject shop3;
+    [SerializeField] private GameObject shop4;
+    [SerializeField] private GameObject shop5;
 
     public ToggleGroup mToggleGroup;
     public ToggleGroup vToggleGroup;
@@ -44,10 +46,10 @@ public class WeponManager : MonoBehaviour {
 
         if (SaveManager.shokaiwepon == 0)
         {
-            Panel.SetActive(true);
-            TextPanel.SetActive(true);
+            panel.SetActive(true);
+            textPanel.SetActive(true);
             tutorialText.SetActive(true);
-            XButton.SetActive(true);
+            xButton.SetActive(true);
         }
 
 
@@ -97,23 +99,17 @@ public class WeponManager : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-
-
-
-    }
 
     public void ReturnButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
         SceneManager.LoadScene("title");
     }
 
     //スタートボタンを押すとシューティングゲームが始まる
     public void StartButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
         Toggle tgl = mToggleGroup.ActiveToggles().FirstOrDefault();
         Toggle tgl2 = vToggleGroup.ActiveToggles().FirstOrDefault();
@@ -241,10 +237,10 @@ public class WeponManager : MonoBehaviour {
 
         if (SaveManager.shokaishooting == 0)
         {
-            Panel.SetActive(true);
-            TextPanel.SetActive(true);
+            panel.SetActive(true);
+            textPanel.SetActive(true);
             tutorialText.SetActive(true);
-            XButton.SetActive(true);
+            xButton.SetActive(true);
 
             SceneManager.LoadScene("shokaishooting");
         }
@@ -257,11 +253,11 @@ public class WeponManager : MonoBehaviour {
 
     public void XButtonDown()
     {
-        GetComponent<AudioSource>().Play();
-        Panel.SetActive(false);
-        TextPanel.SetActive(false);
+        audioSource.Play();
+        panel.SetActive(false);
+        textPanel.SetActive(false);
         tutorialText.SetActive(false);
-        XButton.SetActive(false);
+        xButton.SetActive(false);
 
         SaveManager.shokaiwepon = 1;
     }

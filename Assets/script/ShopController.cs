@@ -10,22 +10,24 @@ public class ShopController : MonoBehaviour {
 
     int itemkanri = 0;
 
-    public GameObject Panel;
-    public GameObject TextPanel;
-    public GameObject BuyButton;
-    public GameObject CancelButton;
-    public GameObject tarinaiPanel;
-    public GameObject tarinaiText;
-    public GameObject susumuButton;
-    public GameObject BuyText;
-    public GameObject tutorialText;
-    public GameObject XButton;
-    public GameObject Button1;
-    public GameObject Button2;
-    public GameObject Button3;
-    public GameObject Button4;
-    public GameObject Button5;
-    public GameObject questiontext;
+    [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject textPanel;
+    [SerializeField] private GameObject buyButton;
+    [SerializeField] private GameObject cancelButton;
+    [SerializeField] private GameObject tarinaiPanel;
+    [SerializeField] private GameObject tarinaiText;
+    [SerializeField] private GameObject susumuButton;
+    [SerializeField] private GameObject buyText;
+    [SerializeField] private GameObject tutorialText;
+    [SerializeField] private GameObject xButton;
+    [SerializeField] private GameObject button1;
+    [SerializeField] private GameObject button2;
+    [SerializeField] private GameObject button3;
+    [SerializeField] private GameObject button4;
+    [SerializeField] private GameObject button5;
+    [SerializeField] private GameObject questiontext;
 
 
 
@@ -43,10 +45,10 @@ public class ShopController : MonoBehaviour {
 
         if (SaveManager.shokaishop == 0)
         {
-            Panel.SetActive(true);
-            TextPanel.SetActive(true);
+            panel.SetActive(true);
+            textPanel.SetActive(true);
             tutorialText.SetActive(true);
-            XButton.SetActive(true);
+            xButton.SetActive(true);
         }
 
     }
@@ -57,31 +59,31 @@ public class ShopController : MonoBehaviour {
         this.shojicoin.GetComponent<Text>().text = "所持コイン " + GameDirector.savecoin;
 
         if (shopbuy1 != 0)
-           Button1.SetActive(false);
+           button1.SetActive(false);
 
         if (shopbuy2 != 0)
-            Button2.SetActive(false);
+            button2.SetActive(false);
 
         if (shopbuy3 != 0)
-            Button3.SetActive(false);
+            button3.SetActive(false);
 
         if (shopbuy4 != 0)
-            Button4.SetActive(false);
+            button4.SetActive(false);
 
         if (shopbuy5 != 0)
-            Button5.SetActive(false);
+            button5.SetActive(false);
 
     }
 
     //1ボタンを押し続けた場合の処理
     public void GetMyOneButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
-        Panel.SetActive(true);
-        TextPanel.SetActive(true);
-        BuyButton.SetActive(true);
-        CancelButton.SetActive(true);
+        panel.SetActive(true);
+        textPanel.SetActive(true);
+        buyButton.SetActive(true);
+        cancelButton.SetActive(true);
         questiontext.SetActive(true);
 
         itemkanri = 1;
@@ -90,12 +92,12 @@ public class ShopController : MonoBehaviour {
     //2ボタンを押し続けた場合の処理
     public void GetMyTwoButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
-        Panel.SetActive(true);
-        TextPanel.SetActive(true);
-        BuyButton.SetActive(true);
-        CancelButton.SetActive(true);
+        panel.SetActive(true);
+        textPanel.SetActive(true);
+        buyButton.SetActive(true);
+        cancelButton.SetActive(true);
         questiontext.SetActive(true);
 
         itemkanri = 2;
@@ -104,12 +106,12 @@ public class ShopController : MonoBehaviour {
     //3ボタンを押し続けた場合の処理
     public void GetMyThreeButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
-        Panel.SetActive(true);
-        TextPanel.SetActive(true);
-        BuyButton.SetActive(true);
-        CancelButton.SetActive(true);
+        panel.SetActive(true);
+        textPanel.SetActive(true);
+        buyButton.SetActive(true);
+        cancelButton.SetActive(true);
         questiontext.SetActive(true);
 
         itemkanri = 3;
@@ -118,12 +120,12 @@ public class ShopController : MonoBehaviour {
     //4ボタンを押し続けた場合の処理
     public void GetMyFourButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
-        Panel.SetActive(true);
-        TextPanel.SetActive(true);
-        BuyButton.SetActive(true);
-        CancelButton.SetActive(true);
+        panel.SetActive(true);
+        textPanel.SetActive(true);
+        buyButton.SetActive(true);
+        cancelButton.SetActive(true);
         questiontext.SetActive(true);
 
         itemkanri = 4;
@@ -132,12 +134,12 @@ public class ShopController : MonoBehaviour {
     //5ボタンを押し続けた場合の処理
     public void GetMyFiveButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
-        Panel.SetActive(true);
-        TextPanel.SetActive(true);
-        BuyButton.SetActive(true);
-        CancelButton.SetActive(true);
+        panel.SetActive(true);
+        textPanel.SetActive(true);
+        buyButton.SetActive(true);
+        cancelButton.SetActive(true);
         questiontext.SetActive(true);
 
         itemkanri = 5;
@@ -146,7 +148,7 @@ public class ShopController : MonoBehaviour {
 
     public void BuyButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
         switch (itemkanri)
         {
@@ -157,10 +159,10 @@ public class ShopController : MonoBehaviour {
                     GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
-                    BuyText.SetActive(true);
+                    buyText.SetActive(true);
                     susumuButton.SetActive(true);
-                    BuyButton.SetActive(false);
-                    CancelButton.SetActive(false);
+                    buyButton.SetActive(false);
+                    cancelButton.SetActive(false);
                     questiontext.SetActive(false);
 
                 }
@@ -178,10 +180,10 @@ public class ShopController : MonoBehaviour {
                     GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
-                    BuyText.SetActive(true);
+                    buyText.SetActive(true);
                     susumuButton.SetActive(true);
-                    BuyButton.SetActive(false);
-                    CancelButton.SetActive(false);
+                    buyButton.SetActive(false);
+                    cancelButton.SetActive(false);
                     questiontext.SetActive(false);
                 }
                 else
@@ -198,10 +200,10 @@ public class ShopController : MonoBehaviour {
                     GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
-                    BuyText.SetActive(true);
+                    buyText.SetActive(true);
                     susumuButton.SetActive(true);
-                    BuyButton.SetActive(false);
-                    CancelButton.SetActive(false);
+                    buyButton.SetActive(false);
+                    cancelButton.SetActive(false);
                     questiontext.SetActive(false);
                 }
                 else
@@ -218,10 +220,10 @@ public class ShopController : MonoBehaviour {
                     GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
-                    BuyText.SetActive(true);
+                    buyText.SetActive(true);
                     susumuButton.SetActive(true);
-                    BuyButton.SetActive(false);
-                    CancelButton.SetActive(false);
+                    buyButton.SetActive(false);
+                    cancelButton.SetActive(false);
                     questiontext.SetActive(false);
                 }
                 else
@@ -238,10 +240,10 @@ public class ShopController : MonoBehaviour {
                     GameDirector.savecoin -= 10;
 
                     tarinaiPanel.SetActive(true);
-                    BuyText.SetActive(true);
+                    buyText.SetActive(true);
                     susumuButton.SetActive(true);
-                    BuyButton.SetActive(false);
-                    CancelButton.SetActive(false);
+                    buyButton.SetActive(false);
+                    cancelButton.SetActive(false);
                     questiontext.SetActive(false);
                 }
                 else
@@ -258,11 +260,11 @@ public class ShopController : MonoBehaviour {
 
     public void CancelButtonDown()
     {
-        GetComponent<AudioSource>().Play();
-        Panel.SetActive(false);
-        TextPanel.SetActive(false);
-        BuyButton.SetActive(false);
-        CancelButton.SetActive(false);
+        audioSource.Play();
+        panel.SetActive(false);
+        textPanel.SetActive(false);
+        buyButton.SetActive(false);
+        cancelButton.SetActive(false);
         tarinaiPanel.SetActive(false);
         tarinaiText.SetActive(false);
         questiontext.SetActive(false);
@@ -273,23 +275,23 @@ public class ShopController : MonoBehaviour {
 
     public void susumuButtonDown()
     {
-        GetComponent<AudioSource>().Play();
-        Panel.SetActive(false);
-        TextPanel.SetActive(false);
+        audioSource.Play();
+        panel.SetActive(false);
+        textPanel.SetActive(false);
         susumuButton.SetActive(false);
         tarinaiPanel.SetActive(false);
-        BuyText.SetActive(false);
+        buyText.SetActive(false);
         questiontext.SetActive(false);
 
     }
 
     public void XButtonDown()
     {
-        GetComponent<AudioSource>().Play();
-        Panel.SetActive(false);
-        TextPanel.SetActive(false);
+        audioSource.Play();
+        panel.SetActive(false);
+        textPanel.SetActive(false);
         tutorialText.SetActive(false);
-        XButton.SetActive(false);
+        xButton.SetActive(false);
 
         SaveManager.shokaishop = 1;
     }
@@ -297,7 +299,7 @@ public class ShopController : MonoBehaviour {
     //戻るボタンを押すとタイトルに遷移する
     public void ReturnButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
         SceneManager.LoadScene("title");
     }
 }
