@@ -1095,16 +1095,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 52131105}
-  tarinaiPanel: {fileID: 2144321996}
-  tarinaiText: {fileID: 1134667924}
-  panel: {fileID: 0}
-  textPanel: {fileID: 0}
-  susumuButton: {fileID: 1586683423}
-  gashaButton: {fileID: 0}
+  deficientPanel: {fileID: 2144321996}
+  deficientText: {fileID: 1134667924}
+  panel: {fileID: 328008598}
+  textPanel: {fileID: 184106111}
+  moveOnButton: {fileID: 1586683423}
+  gashaButton: {fileID: 109816160}
   endPanel: {fileID: 612630044}
   endText: {fileID: 805090462}
   tutorialText: {fileID: 665009011}
-  xButton: {fileID: 0}
+  xButton: {fileID: 1933742290}
   text2: {fileID: 1610802031}
   text3: {fileID: 1101492701}
   text4: {fileID: 437986002}

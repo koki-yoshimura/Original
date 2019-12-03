@@ -3583,14 +3583,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5311ea627c60d4f45ad5b6d2a3157bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  possessionCoin: {fileID: 1674155452}
   audioSource: {fileID: 374543344}
   panel: {fileID: 1873388636}
   textPanel: {fileID: 1261053667}
   buyButton: {fileID: 1351809449}
   cancelButton: {fileID: 782119413}
-  tarinaiPanel: {fileID: 1400429247}
-  tarinaiText: {fileID: 965425151}
-  susumuButton: {fileID: 493362649}
+  deficientPanel: {fileID: 1400429247}
+  deficientText: {fileID: 965425151}
+  moveOnButton: {fileID: 493362649}
   buyText: {fileID: 518472870}
   tutorialText: {fileID: 1749409504}
   xButton: {fileID: 1277478474}
@@ -3599,7 +3600,7 @@ MonoBehaviour:
   button3: {fileID: 625252436}
   button4: {fileID: 1465795113}
   button5: {fileID: 1628808320}
-  questiontext: {fileID: 361745790}
+  questionText: {fileID: 361745790}
 --- !u!1 &1824168908
 GameObject:
   m_ObjectHideFlags: 0
