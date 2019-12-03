@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ShopController : MonoBehaviour {
 
-    GameObject shojicoin;
+    [SerializeField] private Text possessionCoin = null;
 
     int itemkanri = 0;
 
@@ -16,9 +16,9 @@ public class ShopController : MonoBehaviour {
     [SerializeField] private GameObject textPanel;
     [SerializeField] private GameObject buyButton;
     [SerializeField] private GameObject cancelButton;
-    [SerializeField] private GameObject tarinaiPanel;
-    [SerializeField] private GameObject tarinaiText;
-    [SerializeField] private GameObject susumuButton;
+    [SerializeField] private GameObject deficientPanel;
+    [SerializeField] private GameObject deficientText;
+    [SerializeField] private GameObject moveOnButton;
     [SerializeField] private GameObject buyText;
     [SerializeField] private GameObject tutorialText;
     [SerializeField] private GameObject xButton;
@@ -27,7 +27,7 @@ public class ShopController : MonoBehaviour {
     [SerializeField] private GameObject button3;
     [SerializeField] private GameObject button4;
     [SerializeField] private GameObject button5;
-    [SerializeField] private GameObject questiontext;
+    [SerializeField] private GameObject questionText;
 
 
 
@@ -41,9 +41,9 @@ public class ShopController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        this.shojicoin = GameObject.Find("ShojiCoin");
+        possessionCoin.text = "possessionCoin";
 
-        if (SaveManager.shokaishop == 0)
+        if (SaveManager.FirstShop == 0)
         {
             panel.SetActive(true);
             textPanel.SetActive(true);
@@ -56,7 +56,7 @@ public class ShopController : MonoBehaviour {
     //GameDirector.savecoin
     void Update()
     {
-        this.shojicoin.GetComponent<Text>().text = "所持コイン " + GameDirector.savecoin;
+        possessionCoin.text = "所持コイン {GameDirector.savecoin}";
 
         if (shopbuy1 != 0)
            button1.SetActive(false);
@@ -84,7 +84,7 @@ public class ShopController : MonoBehaviour {
         textPanel.SetActive(true);
         buyButton.SetActive(true);
         cancelButton.SetActive(true);
-        questiontext.SetActive(true);
+        questionText.SetActive(true);
 
         itemkanri = 1;
     }
@@ -98,7 +98,7 @@ public class ShopController : MonoBehaviour {
         textPanel.SetActive(true);
         buyButton.SetActive(true);
         cancelButton.SetActive(true);
-        questiontext.SetActive(true);
+        questionText.SetActive(true);
 
         itemkanri = 2;
     }
@@ -112,7 +112,7 @@ public class ShopController : MonoBehaviour {
         textPanel.SetActive(true);
         buyButton.SetActive(true);
         cancelButton.SetActive(true);
-        questiontext.SetActive(true);
+        questionText.SetActive(true);
 
         itemkanri = 3;
     }
@@ -126,7 +126,7 @@ public class ShopController : MonoBehaviour {
         textPanel.SetActive(true);
         buyButton.SetActive(true);
         cancelButton.SetActive(true);
-        questiontext.SetActive(true);
+        questionText.SetActive(true);
 
         itemkanri = 4;
     }    
@@ -140,7 +140,7 @@ public class ShopController : MonoBehaviour {
         textPanel.SetActive(true);
         buyButton.SetActive(true);
         cancelButton.SetActive(true);
-        questiontext.SetActive(true);
+        questionText.SetActive(true);
 
         itemkanri = 5;
     }
@@ -158,18 +158,18 @@ public class ShopController : MonoBehaviour {
                     shopbuy1 = 1;
                     GameDirector.savecoin -= 10;
 
-                    tarinaiPanel.SetActive(true);
+                    deficientPanel.SetActive(true);
                     buyText.SetActive(true);
-                    susumuButton.SetActive(true);
+                    moveOnButton.SetActive(true);
                     buyButton.SetActive(false);
                     cancelButton.SetActive(false);
-                    questiontext.SetActive(false);
+                    questionText.SetActive(false);
 
                 }
                 else
                 {
-                    tarinaiPanel.SetActive(true);
-                    tarinaiText.SetActive(true);
+                    deficientPanel.SetActive(true);
+                    deficientText.SetActive(true);
                 }
                 break;
 
@@ -179,17 +179,17 @@ public class ShopController : MonoBehaviour {
                     shopbuy2 = 1;
                     GameDirector.savecoin -= 10;
 
-                    tarinaiPanel.SetActive(true);
+                    deficientPanel.SetActive(true);
                     buyText.SetActive(true);
-                    susumuButton.SetActive(true);
+                    moveOnButton.SetActive(true);
                     buyButton.SetActive(false);
                     cancelButton.SetActive(false);
-                    questiontext.SetActive(false);
+                    questionText.SetActive(false);
                 }
                 else
                 {
-                    tarinaiPanel.SetActive(true);
-                    tarinaiText.SetActive(true);
+                    deficientPanel.SetActive(true);
+                    deficientText.SetActive(true);
                 }
                 break;
 
@@ -199,17 +199,17 @@ public class ShopController : MonoBehaviour {
                     shopbuy3 = 1;
                     GameDirector.savecoin -= 10;
 
-                    tarinaiPanel.SetActive(true);
+                    deficientPanel.SetActive(true);
                     buyText.SetActive(true);
-                    susumuButton.SetActive(true);
+                    moveOnButton.SetActive(true);
                     buyButton.SetActive(false);
                     cancelButton.SetActive(false);
-                    questiontext.SetActive(false);
+                    questionText.SetActive(false);
                 }
                 else
                 {
-                    tarinaiPanel.SetActive(true);
-                    tarinaiText.SetActive(true);
+                    deficientPanel.SetActive(true);
+                    deficientText.SetActive(true);
                 }
                 break;
 
@@ -219,17 +219,17 @@ public class ShopController : MonoBehaviour {
                     shopbuy4 = 1;
                     GameDirector.savecoin -= 10;
 
-                    tarinaiPanel.SetActive(true);
+                    deficientPanel.SetActive(true);
                     buyText.SetActive(true);
-                    susumuButton.SetActive(true);
+                    moveOnButton.SetActive(true);
                     buyButton.SetActive(false);
                     cancelButton.SetActive(false);
-                    questiontext.SetActive(false);
+                    questionText.SetActive(false);
                 }
                 else
                 {
-                    tarinaiPanel.SetActive(true);
-                    tarinaiText.SetActive(true);
+                    deficientPanel.SetActive(true);
+                    deficientText.SetActive(true);
                 }
                 break;
 
@@ -239,17 +239,17 @@ public class ShopController : MonoBehaviour {
                     shopbuy5 = 1;
                     GameDirector.savecoin -= 10;
 
-                    tarinaiPanel.SetActive(true);
+                    deficientPanel.SetActive(true);
                     buyText.SetActive(true);
-                    susumuButton.SetActive(true);
+                    moveOnButton.SetActive(true);
                     buyButton.SetActive(false);
                     cancelButton.SetActive(false);
-                    questiontext.SetActive(false);
+                    questionText.SetActive(false);
                 }
                 else
                 {
-                    tarinaiPanel.SetActive(true);
-                    tarinaiText.SetActive(true);
+                    deficientPanel.SetActive(true);
+                    deficientText.SetActive(true);
                 }
                 break;
 
@@ -265,23 +265,23 @@ public class ShopController : MonoBehaviour {
         textPanel.SetActive(false);
         buyButton.SetActive(false);
         cancelButton.SetActive(false);
-        tarinaiPanel.SetActive(false);
-        tarinaiText.SetActive(false);
-        questiontext.SetActive(false);
+        deficientPanel.SetActive(false);
+        deficientText.SetActive(false);
+        questionText.SetActive(false);
 
 
 
     }
 
-    public void susumuButtonDown()
+    public void MoveOnButtonDown()
     {
         audioSource.Play();
         panel.SetActive(false);
         textPanel.SetActive(false);
-        susumuButton.SetActive(false);
-        tarinaiPanel.SetActive(false);
+        moveOnButton.SetActive(false);
+        deficientPanel.SetActive(false);
         buyText.SetActive(false);
-        questiontext.SetActive(false);
+        questionText.SetActive(false);
 
     }
 
@@ -293,13 +293,13 @@ public class ShopController : MonoBehaviour {
         tutorialText.SetActive(false);
         xButton.SetActive(false);
 
-        SaveManager.shokaishop = 1;
+        SaveManager.FirstShop = 1;
     }
 
     //戻るボタンを押すとタイトルに遷移する
     public void ReturnButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("Title");
     }
 }

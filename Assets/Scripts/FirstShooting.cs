@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class shokaishooting : MonoBehaviour {
+public class FirstShooting : MonoBehaviour {
 
     [SerializeField] private AudioSource audioSource;
 
@@ -12,8 +12,8 @@ public class shokaishooting : MonoBehaviour {
     {
         audioSource.Play();
 
-        SceneManager.LoadScene("shooting");
+        SceneManager.LoadScene("Shooting");
 
-        SaveManager.shokaishooting = 1;
+        SaveManager.FirstShooting = 1;
     }
 }

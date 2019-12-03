@@ -2917,8 +2917,8 @@ MonoBehaviour:
   shop3: {fileID: 832599663}
   shop4: {fileID: 162289123}
   shop5: {fileID: 2082631749}
-  mToggleGroup: {fileID: 1157765198}
-  vToggleGroup: {fileID: 1712016894}
+  MToggleGroup: {fileID: 1157765198}
+  VToggleGroup: {fileID: 1712016894}
 --- !u!4 &1168239249
 Transform:
   m_ObjectHideFlags: 0

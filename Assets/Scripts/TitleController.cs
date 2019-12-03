@@ -12,7 +12,7 @@ public class TitleController : MonoBehaviour {
     [SerializeField] private GameObject gashaButton;
     [SerializeField] private GameObject shootingButton;
     [SerializeField] private GameObject title;
-    [SerializeField] private GameObject tutorialpanel;
+    [SerializeField] private GameObject tutorialPanel;
 
     public void StartButtonDown()
     {
@@ -24,35 +24,35 @@ public class TitleController : MonoBehaviour {
         gashaButton.SetActive(true);
         shootingButton.SetActive(true);
 
-        if (SaveManager.shokaititle == 0)
+        if (SaveManager.FirstTitle == 0)
         {
-            tutorialpanel.SetActive(true);
+            tutorialPanel.SetActive(true);
         }
     }
 
     public void ShootingButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("soubi");
+        SceneManager.LoadScene("Wepon");
     }
 
     public void ShopButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("shop");
+        SceneManager.LoadScene("Shop");
     }
 
     public void GashaButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("gasha");
+        SceneManager.LoadScene("Gasha");
     }
 
     public void XButtonDown()
     {
         audioSource.Play();
-        tutorialpanel.SetActive(false);
+        tutorialPanel.SetActive(false);
 
-        SaveManager.shokaititle = 1;
+        SaveManager.FirstTitle = 1;
     }
 }

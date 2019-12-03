@@ -15,12 +15,12 @@ public class BoxGacha : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
 
-    [SerializeField] private GameObject tarinaiPanel;
-    [SerializeField] private GameObject tarinaiText;
+    [SerializeField] private GameObject deficientPanel;
+    [SerializeField] private GameObject deficientText;
 
     [SerializeField] private GameObject  panel;
     [SerializeField] private GameObject  textPanel;
-    [SerializeField] private GameObject  susumuButton;
+    [SerializeField] private GameObject moveOnButton;
     [SerializeField] private GameObject gashaButton;
     [SerializeField] private GameObject endPanel;
     [SerializeField] private GameObject endText;
@@ -39,7 +39,7 @@ public class BoxGacha : MonoBehaviour
     {
         this.shojicoin = GameObject.Find("ShojiCoin");
 
-        if (SaveManager.shokaigasha == 0)
+        if (SaveManager.FirstGasha == 0)
         {
             panel.SetActive(true);
             textPanel.SetActive(true);
@@ -79,7 +79,7 @@ public class BoxGacha : MonoBehaviour
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveOnButton.SetActive(true);
                         text4.SetActive(true);
 
 
@@ -92,7 +92,7 @@ public class BoxGacha : MonoBehaviour
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveOnButton.SetActive(true);
                         text3.SetActive(true);
 
                     break;
@@ -104,7 +104,7 @@ public class BoxGacha : MonoBehaviour
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveOnButton.SetActive(true);
                         text2.SetActive(true);
 
                     break;
@@ -116,7 +116,7 @@ public class BoxGacha : MonoBehaviour
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveOnButton.SetActive(true);
                         hazuretext.SetActive(true);
 
                     break;
@@ -125,8 +125,8 @@ public class BoxGacha : MonoBehaviour
         }
         else
         {
-            tarinaiPanel.SetActive(true);
-            tarinaiText.SetActive(true);
+            deficientPanel.SetActive(true);
+            deficientText.SetActive(true);
 
         }
 
@@ -153,7 +153,7 @@ public class BoxGacha : MonoBehaviour
         audioSource.Play();
         panel.SetActive(false);
         textPanel.SetActive(false);
-        susumuButton.SetActive(false);
+        moveOnButton.SetActive(false);
         text2.SetActive(false);
         text3.SetActive(false);
         text4.SetActive(false);
@@ -177,7 +177,7 @@ public class BoxGacha : MonoBehaviour
         tutorialText.SetActive(false);
         xButton.SetActive(false);
 
-        SaveManager.shokaigasha = 1;
+        SaveManager.FirstGasha = 1;
     }
 
 }

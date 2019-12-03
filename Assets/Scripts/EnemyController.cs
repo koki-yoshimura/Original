@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public GameObject coinPrefab;
+    public GameObject CoinPrefab;
 
     private float moveForce = 170.0f;//Enemyの移動速度
 
@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour {
         if (other.gameObject.tag == "Atack")
         {
             Destroy(gameObject);
-            GameObject coin = Instantiate(coinPrefab) as GameObject;
+            GameObject coin = Instantiate(CoinPrefab) as GameObject;
             coin.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
 
         }

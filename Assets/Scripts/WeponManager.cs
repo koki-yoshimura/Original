@@ -24,8 +24,8 @@ public class WeponManager : MonoBehaviour {
     [SerializeField] private GameObject shop4;
     [SerializeField] private GameObject shop5;
 
-    public ToggleGroup mToggleGroup;
-    public ToggleGroup vToggleGroup;
+    public ToggleGroup MToggleGroup;
+    public ToggleGroup VToggleGroup;
 
     //playerに装備する装備
     public static int SoubiA = 0;
@@ -44,7 +44,7 @@ public class WeponManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        if (SaveManager.shokaiwepon == 0)
+        if (SaveManager.FirstWepon == 0)
         {
             panel.SetActive(true);
             textPanel.SetActive(true);
@@ -103,7 +103,7 @@ public class WeponManager : MonoBehaviour {
     public void ReturnButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("Title");
     }
 
     //スタートボタンを押すとシューティングゲームが始まる
@@ -111,8 +111,8 @@ public class WeponManager : MonoBehaviour {
     {
         audioSource.Play();
 
-        Toggle tgl = mToggleGroup.ActiveToggles().FirstOrDefault();
-        Toggle tgl2 = vToggleGroup.ActiveToggles().FirstOrDefault();
+        Toggle tgl = MToggleGroup.ActiveToggles().FirstOrDefault();
+        Toggle tgl2 = VToggleGroup.ActiveToggles().FirstOrDefault();
 
         switch (tgl.name)
         {
@@ -235,18 +235,18 @@ public class WeponManager : MonoBehaviour {
         }
 
 
-        if (SaveManager.shokaishooting == 0)
+        if (SaveManager.FirstShooting == 0)
         {
             panel.SetActive(true);
             textPanel.SetActive(true);
             tutorialText.SetActive(true);
             xButton.SetActive(true);
 
-            SceneManager.LoadScene("shokaishooting");
+            SceneManager.LoadScene("FirstShooting");
         }
         else
         {
-            SceneManager.LoadScene("shooting");
+            SceneManager.LoadScene("Shooting");
         }
 
     }
@@ -259,6 +259,6 @@ public class WeponManager : MonoBehaviour {
         tutorialText.SetActive(false);
         xButton.SetActive(false);
 
-        SaveManager.shokaiwepon = 1;
+        SaveManager.FirstWepon = 1;
     }
 }
