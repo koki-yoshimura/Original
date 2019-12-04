@@ -3595,11 +3595,11 @@ MonoBehaviour:
   buyText: {fileID: 518472870}
   tutorialText: {fileID: 1749409504}
   xButton: {fileID: 1277478474}
-  button1: {fileID: 1824168908}
-  button2: {fileID: 1286058620}
-  button3: {fileID: 625252436}
-  button4: {fileID: 1465795113}
-  button5: {fileID: 1628808320}
+  blueButton: {fileID: 1824168908}
+  lightBlueButton: {fileID: 1286058620}
+  greenButton: {fileID: 625252436}
+  yellowButton: {fileID: 1465795113}
+  purpleButton: {fileID: 1628808320}
   questionText: {fileID: 361745790}
 --- !u!1 &1824168908
 GameObject:

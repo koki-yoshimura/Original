@@ -22,11 +22,11 @@ public class ShopController : MonoBehaviour {
     [SerializeField] private GameObject buyText;
     [SerializeField] private GameObject tutorialText;
     [SerializeField] private GameObject xButton;
-    [SerializeField] private GameObject button1;
-    [SerializeField] private GameObject button2;
-    [SerializeField] private GameObject button3;
-    [SerializeField] private GameObject button4;
-    [SerializeField] private GameObject button5;
+    [SerializeField] private GameObject blueButton;
+    [SerializeField] private GameObject lightBlueButton;
+    [SerializeField] private GameObject greenButton;
+    [SerializeField] private GameObject yellowButton;
+    [SerializeField] private GameObject purpleButton;
     [SerializeField] private GameObject questionText;
 
 
@@ -56,22 +56,22 @@ public class ShopController : MonoBehaviour {
     //GameDirector.savecoin
     void Update()
     {
-        possessionCoin.text = "所持コイン {GameDirector.savecoin}";
+        possessionCoin.text = "所持コイン ${GameDirector.savecoin}";
 
         if (shopbuy1 != 0)
-           button1.SetActive(false);
+            blueButton.SetActive(false);
 
         if (shopbuy2 != 0)
-            button2.SetActive(false);
+            lightBlueButton.SetActive(false);
 
         if (shopbuy3 != 0)
-            button3.SetActive(false);
+            greenButton.SetActive(false);
 
         if (shopbuy4 != 0)
-            button4.SetActive(false);
+            yellowButton.SetActive(false);
 
         if (shopbuy5 != 0)
-            button5.SetActive(false);
+            purpleButton.SetActive(false);
 
     }
 
