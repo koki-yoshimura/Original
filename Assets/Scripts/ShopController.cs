@@ -56,7 +56,7 @@ public class ShopController : MonoBehaviour {
     //GameDirector.savecoin
     void Update()
     {
-        possessionCoin.text = "所持コイン ${GameDirector.savecoin}";
+        possessionCoin.text = $"所持コイン {GameDirector.savecoin}";
 
         if (shopbuy1 != 0)
             blueButton.SetActive(false);

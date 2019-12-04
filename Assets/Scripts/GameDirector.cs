@@ -46,12 +46,12 @@ public class GameDirector : MonoBehaviour {
         if (remainingTime <= 0)
         {
             IsClear = true;
-            SceneManager.LoadScene("rizaruto");
+            SceneManager.LoadScene("Result");
         }
         else if(HP <= 0)
         {
             IsClear = false;
-            SceneManager.LoadScene("rizaruto");
+            SceneManager.LoadScene("Result");
         }
 
 
