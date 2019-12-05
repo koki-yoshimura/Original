@@ -10,25 +10,27 @@ public class PlayerController : MonoBehaviour {
 
     private float moveForce = 14.0f; //上下に移動するための力
 
-    public GameObject player1;
+    [SerializeField] private AudioSource audioSource;
 
-    public GameObject player2;
+    [SerializeField] private GameObject player1;
 
-    public GameObject player3;
+    [SerializeField] private GameObject player2;
 
-    public GameObject player4;
+    [SerializeField] private GameObject player3;
 
-    public GameObject atackPrefab;
+    [SerializeField] private GameObject player4;
 
-    public GameObject atackPrefab2;
+    [SerializeField] private GameObject atackPrefab;
 
-    public GameObject atackPrefab3;
+    [SerializeField] private GameObject atackPrefab2;
 
-    public GameObject atackPrefab4;
+    [SerializeField] private GameObject atackPrefab3;
 
-    public GameObject atackPrefab5;
+    [SerializeField] private GameObject atackPrefab4;
 
-    public GameObject atackPrefab6;
+    [SerializeField] private GameObject atackPrefab5;
+
+    [SerializeField] private GameObject atackPrefab6;
 
 
     GameObject director;
@@ -112,7 +114,7 @@ public class PlayerController : MonoBehaviour {
 
         public void GetMyAButtonDown()//発射ボタンを押した際に弾を生成する
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
         //装備画面にて押されたチェックボックスによって攻撃が切り替わる
         if (WeponManager.SoubiE == 1)
