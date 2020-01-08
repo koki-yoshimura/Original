@@ -38,10 +38,8 @@ public class TitleController : MonoBehaviour {
 
         if (SaveManager.shokaititle == 0)
         {
-            Panel.SetActive(true);
-            TextPanel.SetActive(true);
-            tutorialText.SetActive(true);
-            XButton.SetActive(true);
+            var dialog = (GameObject)Resources.Load("Prefabs/DialogPrefab");
+            Instantiate(dialog, CommonDialog.transform, worldPositionStays: false);
         }
     }
 
