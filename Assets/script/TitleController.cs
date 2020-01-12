@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
 
+    [SerializeField] private GameObject goDialogRoot = null;
+
     public GameObject StartButton;
     public GameObject ShopButton;
     public GameObject GashaButton;
@@ -15,10 +17,14 @@ public class TitleController : MonoBehaviour {
     public GameObject tutorialText;
     public GameObject XButton;
 
+    public GameObject dialog;
+
     // Use this for initialization
     void Start () {
-		
-	}
+        var dialog = (GameObject)Resources.Load("Prefabs/CommonDialog");
+        Instantiate(dialog, goDialogRoot.transform, worldPositionStays: false);
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,8 +44,7 @@ public class TitleController : MonoBehaviour {
 
         if (SaveManager.shokaititle == 0)
         {
-            var dialog = (GameObject)Resources.Load("Prefabs/DialogPrefab");
-            Instantiate(dialog, CommonDialog.transform, worldPositionStays: false);
+
         }
     }
 

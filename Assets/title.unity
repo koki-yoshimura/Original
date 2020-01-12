@@ -112,6 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &143396553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143396554}
+  m_Layer: 0
+  m_Name: CommonDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &143396554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143396553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 640, y: 360, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278563177
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,15 +982,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccc3043fdb34ef489678317aa8d7b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartButton: {fileID: 1555490738}
-  ShopButton: {fileID: 813391660}
-  GashaButton: {fileID: 324265019}
-  ShootingButton: {fileID: 1459717796}
-  Title: {fileID: 1410524971}
+  goDialogRoot: {fileID: 143396553}
+  StartButton: {fileID: 0}
+  ShopButton: {fileID: 0}
+  GashaButton: {fileID: 0}
+  ShootingButton: {fileID: 0}
+  Title: {fileID: 0}
   Panel: {fileID: 0}
   TextPanel: {fileID: 0}
   tutorialText: {fileID: 0}
   XButton: {fileID: 0}
+  dialog: {fileID: 0}
 --- !u!4 &1503753538
 Transform:
   m_ObjectHideFlags: 0
