@@ -982,17 +982,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccc3043fdb34ef489678317aa8d7b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goDialogRoot: {fileID: 143396553}
-  StartButton: {fileID: 0}
-  ShopButton: {fileID: 0}
-  GashaButton: {fileID: 0}
-  ShootingButton: {fileID: 0}
-  Title: {fileID: 0}
+  StartButton: {fileID: 1555490738}
+  ShopButton: {fileID: 813391660}
+  GashaButton: {fileID: 324265019}
+  ShootingButton: {fileID: 1459717796}
+  Title: {fileID: 1410524971}
   Panel: {fileID: 0}
   TextPanel: {fileID: 0}
   tutorialText: {fileID: 0}
   XButton: {fileID: 0}
-  dialog: {fileID: 0}
 --- !u!4 &1503753538
 Transform:
   m_ObjectHideFlags: 0
