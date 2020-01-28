@@ -990,6 +990,8 @@ MonoBehaviour:
   Title: {fileID: 1410524971}
   audioSource: {fileID: 2010706328}
   goDialogRoot: {fileID: 143396553}
+  commonDialog: {fileID: 2556041822901053219, guid: 650b983d1d5a0774c890194565e0a3ce,
+    type: 3}
 --- !u!4 &1503753538
 Transform:
   m_ObjectHideFlags: 0
