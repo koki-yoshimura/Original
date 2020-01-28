@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TitleController : MonoBehaviour {
 
@@ -33,7 +34,8 @@ public class TitleController : MonoBehaviour {
             var dialog = (GameObject)Resources.Load("Prefabs/CommonDialog");
             Instantiate(dialog, goDialogRoot.transform, worldPositionStays: false);
             this.XButton = GameObject.Find("XButton");
-            this.XButton = GetComponent<Button>;
+            this.XButton.AddComponent<Button>();
+            this.XButton.onClick.AddListener(OnClickButton);
 
         }
     }
