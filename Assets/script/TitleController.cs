@@ -18,6 +18,8 @@ public class TitleController : MonoBehaviour {
 
     GameObject  XButton;
 
+    private GameObject dialogObj = null;
+
     //スタートボタンを押すと非アクティブのボタンがアクティブとなる
     public void StartButtonDown()
     {
@@ -29,15 +31,13 @@ public class TitleController : MonoBehaviour {
         GashaButton.SetActive(true);
         ShootingButton.SetActive(true);
 
-        if (SaveManager.shokaititle == 0)
-        {
             var dialog = (GameObject)Resources.Load("Prefabs/CommonDialog");
-            Instantiate(dialog, goDialogRoot.transform, worldPositionStays: false);
-            this.XButton = GameObject.Find("XButton");
-            this.XButton.AddComponent<Button>();
-            this.XButton.onClick.AddListener(OnClickButton);
+            dialogObj = Instantiate(dialog, goDialogRoot.transform, worldPositionStays: false);
+            //this.XButton = GameObject.Find("XButton");
+            //this.XButton.AddComponent<Button>();
+            //this.XButton.onClick.AddListener(XButtonDown);
 
-        }
+
     }
 
     //soubiボタンを押してsoubiシーンに遷移する
@@ -64,10 +64,12 @@ public class TitleController : MonoBehaviour {
     public void XButtonDown()
     {
         audioSource.Play();
-        Panel.SetActive(false);
-        TextPanel.SetActive(false);
-        tutorialText.SetActive(false);
-        XButton.SetActive(false);
+        //Panel.SetActive(false);
+        //TextPanel.SetActive(false);
+        //tutorialText.SetActive(false);
+        //XButton.SetActive(false);
+        Destroy(dialogObj);
+
 
         SaveManager.shokaititle = 1;
     }

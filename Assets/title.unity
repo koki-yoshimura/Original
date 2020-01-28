@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 1503753538}
   - component: {fileID: 1503753537}
   - component: {fileID: 1503753539}
+  - component: {fileID: 1503753540}
   m_Layer: 0
   m_Name: TitleManager
   m_TagString: Untagged
@@ -987,10 +988,8 @@ MonoBehaviour:
   GashaButton: {fileID: 324265019}
   ShootingButton: {fileID: 1459717796}
   Title: {fileID: 1410524971}
-  Panel: {fileID: 0}
-  TextPanel: {fileID: 0}
-  tutorialText: {fileID: 0}
-  XButton: {fileID: 0}
+  audioSource: {fileID: 2010706328}
+  goDialogRoot: {fileID: 143396553}
 --- !u!4 &1503753538
 Transform:
   m_ObjectHideFlags: 0
@@ -1101,6 +1100,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1503753540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503753536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d13deeea4ca9343b507d2e665bac99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555490738
 GameObject:
   m_ObjectHideFlags: 0
