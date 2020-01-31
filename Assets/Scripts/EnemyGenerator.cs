@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour {
 	
-float baseXPos = 6; // 基準となるx座標
-float baseYPos = 4; // 基準となるy座標
+    float baseXPos = 6; // 基準となるx座標
+    float baseYPos = 4; // 基準となるy座標
 
-float xOffset = 0.5f; // X座標の生成間隔
-float yOffset = 1.5f; // Y軸の生成間隔
+    float xOffset = 0.5f; // X座標の生成間隔
+    float yOffset = 1.5f; // Y軸の生成間隔
 
-float remainingTime = 5.0f; // Enemyを生成するまでの時間
+    float remainingTime = 5.0f; // Enemyを生成するまでの時間
 
-    public GameObject enemyPrefab;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    [SerializeField] private GameObject enemyPrefab;
 
 
     void Update()

@@ -6,22 +6,14 @@ using UnityEngine.UI;
 
 public class shokaishooting : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [SerializeField] private AudioSource audioSource;
 
     public void XButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
         SceneManager.LoadScene("shooting");
 
-        SaveManager.shokaishooting = 1;
+        SaveManager.Shokaishooting = 1;
     }
 }

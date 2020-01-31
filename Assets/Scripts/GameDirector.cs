@@ -11,7 +11,6 @@ public class GameDirector : MonoBehaviour {
     float remainingTime = 30.0f;
 
     GameObject coinText;
-
     GameObject HPText;
 
     int coin = 0;

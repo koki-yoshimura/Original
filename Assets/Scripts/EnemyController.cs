@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public GameObject coinPrefab;
-
+    [SerializeField] private GameObject coinPrefab;
     private float moveForce = 170.0f;//Enemyの移動速度
 
     private Rigidbody myRigidbody;

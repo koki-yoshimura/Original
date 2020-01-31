@@ -7,38 +7,24 @@ public class PlayerController : MonoBehaviour {
 
     
     private Rigidbody myRigidbody;
-
     private float moveForce = 14.0f; //上下に移動するための力
 
-    public GameObject player1;
-
-    public GameObject player2;
-
-    public GameObject player3;
-
-    public GameObject player4;
-
-    public GameObject atackPrefab;
-
-    public GameObject atackPrefab2;
-
-    public GameObject atackPrefab3;
-
-    public GameObject atackPrefab4;
-
-    public GameObject atackPrefab5;
-
-    public GameObject atackPrefab6;
-
+    [SerializeField] private GameObject player1;
+    [SerializeField] private GameObject player2;
+    [SerializeField] private GameObject player3;
+    [SerializeField] private GameObject player4;
+    [SerializeField] private GameObject atackPrefab;
+    [SerializeField] private GameObject atackPrefab2;
+    [SerializeField] private GameObject atackPrefab3;
+    [SerializeField] private GameObject atackPrefab4;
+    [SerializeField] private GameObject atackPrefab5;
+    [SerializeField] private GameObject atackPrefab6;
 
     GameObject director;
     
     private bool isUButtonDown = false;//左ボタン押下の判定
     
     private bool isDButtonDown = false;//右ボタン押下の判定
-
-
-
 
 
     // Use this for initialization

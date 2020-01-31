@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
 
-    [SerializeField] private GameObject StartButton;
-    [SerializeField] private GameObject ShopButton;
-    [SerializeField] private GameObject GashaButton;
-    [SerializeField] private GameObject ShootingButton;
-    [SerializeField] private GameObject Title;
+    [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject shopButton;
+    [SerializeField] private GameObject gashaButton;
+    [SerializeField] private GameObject shootingButton;
+    [SerializeField] private GameObject title;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject goDialogRoot = null;
     [SerializeField] private CommonDialog commonDialog = null;
@@ -22,11 +22,11 @@ public class TitleController : MonoBehaviour {
     {
         audioSource.Play();
 
-        StartButton.SetActive(false);
-        Title.SetActive(false);
-        ShopButton.SetActive(true);
-        GashaButton.SetActive(true);
-        ShootingButton.SetActive(true);
+        startButton.SetActive(false);
+        title.SetActive(false);
+        shopButton.SetActive(true);
+        gashaButton.SetActive(true);
+        shootingButton.SetActive(true);
 
             //var dialog = (GameObject)Resources.Load("Prefabs/CommonDialog");
             commonDialog = Instantiate(commonDialog, goDialogRoot.transform, worldPositionStays: false);

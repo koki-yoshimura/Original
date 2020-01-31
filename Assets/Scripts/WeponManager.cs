@@ -7,23 +7,19 @@ using System.Linq;
 
 public class WeponManager : MonoBehaviour {
 
-    public GameObject Panel;
-    public GameObject TextPanel;
-    public GameObject tutorialText;
-    public GameObject XButton;
-
-    public GameObject gasha1;
-    public GameObject gasha2;
-    public GameObject gasha3;
-
-    public GameObject shop1;
-    public GameObject shop2;
-    public GameObject shop3;
-    public GameObject shop4;
-    public GameObject shop5;
-
-    public ToggleGroup mToggleGroup;
-    public ToggleGroup vToggleGroup;
+    [SerializeField] private GameObject gasha1;
+    [SerializeField] private GameObject gasha2;
+    [SerializeField] private GameObject gasha3;
+    [SerializeField] private GameObject shop1;
+    [SerializeField] private GameObject shop2;
+    [SerializeField] private GameObject shop3;
+    [SerializeField] private GameObject shop4;
+    [SerializeField] private GameObject shop5;
+    [SerializeField] private ToggleGroup mToggleGroup;
+    [SerializeField] private ToggleGroup vToggleGroup;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject goDialogRoot = null;
+    [SerializeField] private CommonDialog commonDialog = null;
 
     //playerに装備する装備
     public static int SoubiA = 0;
@@ -42,12 +38,9 @@ public class WeponManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        if (SaveManager.shokaiwepon == 0)
+        if (SaveManager.Shokaiwepon == 0)
         {
-            Panel.SetActive(true);
-            TextPanel.SetActive(true);
-            tutorialText.SetActive(true);
-            XButton.SetActive(true);
+            commonDialog = Instantiate(commonDialog, goDialogRoot.transform, worldPositionStays: false);
         }
 
 
@@ -71,49 +64,42 @@ public class WeponManager : MonoBehaviour {
 
 
         //ショップで購入したボタン、チェックボックスが装備画面に表示されるようにしている
-        if (ShopController.shopbuy1 == 1)
+        if (ShopController.Shopbuy1 == 1)
         {
             shop1.SetActive(true);
         }
 
-        if (ShopController.shopbuy2 == 1)
+        if (ShopController.Shopbuy2 == 1)
         {
             shop2.SetActive(true);
         }
 
-        if (ShopController.shopbuy3 == 1)
+        if (ShopController.Shopbuy3 == 1)
         {
             shop3.SetActive(true);
         }
 
-        if (ShopController.shopbuy4 == 1)
+        if (ShopController.Shopbuy4 == 1)
         {
             shop4.SetActive(true);
         }
 
-        if (ShopController.shopbuy5 == 1)
+        if (ShopController.Shopbuy5 == 1)
         {
             shop5.SetActive(true);
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-
-
-
-    }
 
     public void ReturnButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
         SceneManager.LoadScene("title");
     }
 
     //スタートボタンを押すとシューティングゲームが始まる
     public void StartButtonDown()
     {
-        GetComponent<AudioSource>().Play();
+        audioSource.Play();
 
         Toggle tgl = mToggleGroup.ActiveToggles().FirstOrDefault();
         Toggle tgl2 = vToggleGroup.ActiveToggles().FirstOrDefault();
@@ -239,12 +225,12 @@ public class WeponManager : MonoBehaviour {
         }
 
 
-        if (SaveManager.shokaishooting == 0)
+        if (SaveManager.Shokaishooting == 0)
         {
-            Panel.SetActive(true);
-            TextPanel.SetActive(true);
+            panel.SetActive(true);
+            textPanel.SetActive(true);
             tutorialText.SetActive(true);
-            XButton.SetActive(true);
+            xButton.SetActive(true);
 
             SceneManager.LoadScene("shokaishooting");
         }
@@ -257,12 +243,12 @@ public class WeponManager : MonoBehaviour {
 
     public void XButtonDown()
     {
-        GetComponent<AudioSource>().Play();
-        Panel.SetActive(false);
-        TextPanel.SetActive(false);
+        audioSource.Play();
+        panel.SetActive(false);
+        textPanel.SetActive(false);
         tutorialText.SetActive(false);
-        XButton.SetActive(false);
+        xButton.SetActive(false);
 
-        SaveManager.shokaiwepon = 1;
+        SaveManager.Shokaiwepon = 1;
     }
 }
