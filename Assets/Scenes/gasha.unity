@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 51072298}
   - component: {fileID: 51072297}
   m_Layer: 5
-  m_Name: hazureText
+  m_Name: LosingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 264607744}
   - component: {fileID: 264607743}
   m_Layer: 0
-  m_Name: gashase
+  m_Name: GashaSe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 612630047}
   - component: {fileID: 612630046}
   m_Layer: 5
-  m_Name: endPanel
+  m_Name: EndPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 665009014}
   - component: {fileID: 665009013}
   m_Layer: 5
-  m_Name: tutorialText
+  m_Name: TutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 777751935}
   - component: {fileID: 777751934}
   m_Layer: 5
-  m_Name: ShojiCoin
+  m_Name: PossessionCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1118,7 +1118,7 @@ GameObject:
   - component: {fileID: 805090465}
   - component: {fileID: 805090464}
   m_Layer: 5
-  m_Name: endText
+  m_Name: EndText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1252,7 +1252,7 @@ GameObject:
   - component: {fileID: 1094010035}
   - component: {fileID: 1094010034}
   m_Layer: 0
-  m_Name: gashabgm
+  m_Name: GashaBgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 1134667927}
   - component: {fileID: 1134667926}
   m_Layer: 5
-  m_Name: tarinaiText
+  m_Name: ShortageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1703,7 +1703,7 @@ GameObject:
   - component: {fileID: 1303766028}
   - component: {fileID: 1303766027}
   m_Layer: 0
-  m_Name: background
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1784,7 +1784,7 @@ GameObject:
   - component: {fileID: 1586683426}
   - component: {fileID: 1586683425}
   m_Layer: 5
-  m_Name: susumuButton
+  m_Name: MoveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2606,7 +2606,7 @@ GameObject:
   - component: {fileID: 2144321999}
   - component: {fileID: 2144321998}
   m_Layer: 5
-  m_Name: tarinaiPanel
+  m_Name: ShortagePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

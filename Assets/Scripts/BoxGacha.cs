@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 public class BoxGacha : MonoBehaviour
 {
 
-    GameObject shojiCoin;
+    GameObject possessionCoin;
 
     public static int Gasha1 = 0;
     public static int Gasha2 = 0;
     public static int Gasha3 = 0;
 
-    [SerializeField] private GameObject tarinaiPanel;
-    [SerializeField] private GameObject tarinaiText;
+    [SerializeField] private GameObject shortagePanel;
+    [SerializeField] private GameObject shortageText;
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject textPanel;
-    [SerializeField] private GameObject susumuButton;
+    [SerializeField] private GameObject moveButton;
     [SerializeField] private GameObject gashaButton;
     [SerializeField] private GameObject endPanel;
     [SerializeField] private GameObject endText;
@@ -26,7 +26,7 @@ public class BoxGacha : MonoBehaviour
     [SerializeField] private GameObject text2;
     [SerializeField] private GameObject text3;
     [SerializeField] private GameObject text4;
-    [SerializeField] private GameObject hazureText;
+    [SerializeField] private GameObject losingText;
     [SerializeField] private AudioSource audioSource;
 
 
@@ -34,9 +34,9 @@ public class BoxGacha : MonoBehaviour
 
     void Start()
     {
-        this.shojiCoin = GameObject.Find("ShojiCoin");
+        this.possessionCoin = GameObject.Find("PossessionCoin");
 
-        if (SaveManager.Shokaigasha == 0)
+        if (SaveManager.FirstGasha == 0)
         {
             panel.SetActive(true);
             textPanel.SetActive(true);
@@ -55,7 +55,7 @@ public class BoxGacha : MonoBehaviour
 
     void Update()
     {
-        this.shojiCoin.GetComponent<Text>().text = "所持コイン " + GameDirector.savecoin;
+        this.possessionCoin.GetComponent<Text>().text = "所持コイン " + GameDirector.SaveCoin;
 
     }
 
@@ -65,18 +65,18 @@ public class BoxGacha : MonoBehaviour
 
         int i = Random.Range(0, m_gachaItems.Count);
 
-        if (GameDirector.savecoin >= 10)
+        if (GameDirector.SaveCoin >= 10)
         {
             switch (m_gachaItems[i])
             {
                 case "a":
 
                         Gasha1 = 1;
-                        GameDirector.savecoin -= 10;
+                        GameDirector.SaveCoin -= 10;
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveButton.SetActive(true);
                         text4.SetActive(true);
 
 
@@ -85,11 +85,11 @@ public class BoxGacha : MonoBehaviour
                 case "b":
 
                         Gasha2 = 1;
-                        GameDirector.savecoin -= 10;
+                        GameDirector.SaveCoin -= 10;
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveButton.SetActive(true);
                         text3.SetActive(true);
 
                     break;
@@ -97,24 +97,24 @@ public class BoxGacha : MonoBehaviour
                 case "c":
 
                         Gasha3 = 1;
-                        GameDirector.savecoin -= 10;
+                        GameDirector.SaveCoin -= 10;
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
+                        moveButton.SetActive(true);
                         text2.SetActive(true);
 
                     break;
 
                 case "d":
 
-                        GameDirector.savecoin -= 10
+                        GameDirector.SaveCoin -= 10
                             ;
 
                         panel.SetActive(true);
                         textPanel.SetActive(true);
-                        susumuButton.SetActive(true);
-                        hazureText.SetActive(true);
+                        moveButton.SetActive(true);
+                        losingText.SetActive(true);
 
                     break;
 
@@ -122,8 +122,8 @@ public class BoxGacha : MonoBehaviour
         }
         else
         {
-            tarinaiPanel.SetActive(true);
-            tarinaiText.SetActive(true);
+            shortagePanel.SetActive(true);
+            shortageText.SetActive(true);
 
         }
 
@@ -142,7 +142,7 @@ public class BoxGacha : MonoBehaviour
     public void ReturnButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("Title");
     }
 
     public void susumuButtonDown()
@@ -150,11 +150,11 @@ public class BoxGacha : MonoBehaviour
         audioSource.Play();
         panel.SetActive(false);
         textPanel.SetActive(false);
-        susumuButton.SetActive(false);
+        moveButton.SetActive(false);
         text2.SetActive(false);
         text3.SetActive(false);
         text4.SetActive(false);
-        hazureText.SetActive(false);
+        losingText.SetActive(false);
 
         if (m_gachaItems.Count < 1)
         {
@@ -174,7 +174,7 @@ public class BoxGacha : MonoBehaviour
         tutorialText.SetActive(false);
         xButton.SetActive(false);
 
-        SaveManager.Shokaigasha = 1;
+        SaveManager.FirstGasha = 1;
     }
 
 }

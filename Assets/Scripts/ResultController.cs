@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class rizarutoController : MonoBehaviour {
+public class ResultController : MonoBehaviour {
 
     GameObject rizaruto;
     GameObject clearse;
@@ -34,13 +34,8 @@ public class rizarutoController : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void Update () {
-
-    }
-
     public void TitleButtonDown()
     {
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("Title");
     }
 }

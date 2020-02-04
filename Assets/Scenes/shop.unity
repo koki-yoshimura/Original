@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 361745793}
   - component: {fileID: 361745792}
   m_Layer: 5
-  m_Name: questionText
+  m_Name: QuestionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 493362652}
   - component: {fileID: 493362651}
   m_Layer: 5
-  m_Name: susumuButton
+  m_Name: MoveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1224,7 +1224,7 @@ GameObject:
   - component: {fileID: 659536761}
   - component: {fileID: 659536760}
   m_Layer: 0
-  m_Name: shopbgm
+  m_Name: ShopBgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1630,7 +1630,7 @@ GameObject:
   - component: {fileID: 829602700}
   - component: {fileID: 829602699}
   m_Layer: 0
-  m_Name: background
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1856,7 +1856,7 @@ GameObject:
   - component: {fileID: 965425154}
   - component: {fileID: 965425153}
   m_Layer: 5
-  m_Name: tarinaiText
+  m_Name: ShortageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2655,7 +2655,7 @@ GameObject:
   - component: {fileID: 1382612498}
   - component: {fileID: 1382612497}
   m_Layer: 0
-  m_Name: shopse
+  m_Name: ShopSe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2784,7 +2784,7 @@ GameObject:
   - component: {fileID: 1400429249}
   - component: {fileID: 1400429251}
   m_Layer: 5
-  m_Name: tarinaiPanel
+  m_Name: ShortagePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3444,7 +3444,7 @@ GameObject:
   - component: {fileID: 1674155453}
   - component: {fileID: 1674155452}
   m_Layer: 5
-  m_Name: ShojiCoin
+  m_Name: PossessionCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3521,7 +3521,7 @@ GameObject:
   - component: {fileID: 1749409507}
   - component: {fileID: 1749409506}
   m_Layer: 5
-  m_Name: tutorialText
+  m_Name: TutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

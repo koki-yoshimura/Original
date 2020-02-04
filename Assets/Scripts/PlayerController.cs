@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
 
         //装備画面にて押されたチェックボックスによって装備が切り替わる
-        if (WeponManager.SoubiA == 1)
+        if (WeaponManager.SoubiA == 1)
         {
             player1.SetActive(true);
             player2.SetActive(false);
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
             player4.SetActive(false);
         }
 
-        if (WeponManager.SoubiB == 1)
+        if (WeaponManager.SoubiB == 1)
         {
             player1.SetActive(false);
             player2.SetActive(true);
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
             player4.SetActive(false);
         }
 
-        if (WeponManager.SoubiC == 1)
+        if (WeaponManager.SoubiC == 1)
         {
             player1.SetActive(false);
             player2.SetActive(false);
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
             player4.SetActive(false);
         }
 
-        if (WeponManager.SoubiD == 1)
+        if (WeaponManager.SoubiD == 1)
         {
             player1.SetActive(false);
             player2.SetActive(false);
@@ -101,37 +101,37 @@ public class PlayerController : MonoBehaviour {
         GetComponent<AudioSource>().Play();
 
         //装備画面にて押されたチェックボックスによって攻撃が切り替わる
-        if (WeponManager.SoubiE == 1)
+        if (WeaponManager.SoubiE == 1)
         {
             GameObject atack = Instantiate(atackPrefab) as GameObject;
             atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
 
-        if (WeponManager.SoubiF == 1)
+        if (WeaponManager.SoubiF == 1)
         {
             GameObject atack = Instantiate(atackPrefab2) as GameObject;
             atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
 
-        if (WeponManager.SoubiG == 1)
+        if (WeaponManager.SoubiG == 1)
         {
             GameObject atack = Instantiate(atackPrefab3) as GameObject;
             atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
 
-        if (WeponManager.SoubiH == 1)
+        if (WeaponManager.SoubiH == 1)
         {
             GameObject atack = Instantiate(atackPrefab4) as GameObject;
             atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
 
-        if (WeponManager.SoubiI == 1)
+        if (WeaponManager.SoubiI == 1)
         {
             GameObject atack = Instantiate(atackPrefab5) as GameObject;
             atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);
         }
 
-        if (WeponManager.SoubiJ == 1)
+        if (WeaponManager.SoubiJ == 1)
         {
             GameObject atack = Instantiate(atackPrefab6) as GameObject;
             atack.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 1.2f, 0);

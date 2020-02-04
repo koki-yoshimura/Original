@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Linq;
 
-public class WeponManager : MonoBehaviour {
+public class WeaponManager : MonoBehaviour {
 
     [SerializeField] private GameObject gasha1;
     [SerializeField] private GameObject gasha2;
@@ -38,7 +38,7 @@ public class WeponManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        if (SaveManager.Shokaiwepon == 0)
+        if (SaveManager.FirstWeapon == 0)
         {
             commonDialog = Instantiate(commonDialog, goDialogRoot.transform, worldPositionStays: false);
         }
@@ -93,7 +93,7 @@ public class WeponManager : MonoBehaviour {
     public void ReturnButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("Title");
     }
 
     //スタートボタンを押すとシューティングゲームが始まる
@@ -225,30 +225,15 @@ public class WeponManager : MonoBehaviour {
         }
 
 
-        if (SaveManager.Shokaishooting == 0)
+        if (SaveManager.FirstShooting == 0)
         {
-            panel.SetActive(true);
-            textPanel.SetActive(true);
-            tutorialText.SetActive(true);
-            xButton.SetActive(true);
 
-            SceneManager.LoadScene("shokaishooting");
+            SceneManager.LoadScene("FirstShooting");
         }
         else
         {
-            SceneManager.LoadScene("shooting");
+            SceneManager.LoadScene("Shooting");
         }
 
-    }
-
-    public void XButtonDown()
-    {
-        audioSource.Play();
-        panel.SetActive(false);
-        textPanel.SetActive(false);
-        tutorialText.SetActive(false);
-        xButton.SetActive(false);
-
-        SaveManager.Shokaiwepon = 1;
     }
 }

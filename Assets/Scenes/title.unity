@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 918329853}
   - component: {fileID: 918329852}
   m_Layer: 0
-  m_Name: background
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 1449746244}
   - component: {fileID: 1449746243}
   m_Layer: 0
-  m_Name: titlese
+  m_Name: TitleSe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 1822430534}
   - component: {fileID: 1822430533}
   m_Layer: 5
-  m_Name: maousoul
+  m_Name: MaouDamashii
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1671,7 +1671,7 @@ GameObject:
   - component: {fileID: 2010706329}
   - component: {fileID: 2010706328}
   m_Layer: 0
-  m_Name: titlebgm
+  m_Name: TitleBgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

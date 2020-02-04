@@ -38,21 +38,21 @@ public class TitleController : MonoBehaviour {
     public void ShootingButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("soubi");
+        SceneManager.LoadScene("Weapon");
     }
 
     //shopボタンを押してshopシーンに遷移する
     public void ShopButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("shop");
+        SceneManager.LoadScene("Shop");
     }
 
     //gashaボタンを押してgashaシーンに遷移する
     public void GashaButtonDown()
     {
         audioSource.Play();
-        SceneManager.LoadScene("gasha");
+        SceneManager.LoadScene("Gasha");
     }
 
 }

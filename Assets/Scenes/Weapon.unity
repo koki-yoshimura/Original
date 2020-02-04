@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 129677354}
   - component: {fileID: 129677353}
   m_Layer: 0
-  m_Name: weponse
+  m_Name: WeaponSe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 392381183}
   - component: {fileID: 392381185}
   m_Layer: 0
-  m_Name: background
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2982,7 +2982,7 @@ GameObject:
   - component: {fileID: 1168239249}
   - component: {fileID: 1168239248}
   m_Layer: 0
-  m_Name: WeponManager
+  m_Name: WeaponManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3000,10 +3000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf7837b3acb6514ebc4e577d3e4e112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  textPanel: {fileID: 0}
-  tutorialText: {fileID: 0}
-  xButton: {fileID: 0}
   gasha1: {fileID: 1086416185}
   gasha2: {fileID: 1812964324}
   gasha3: {fileID: 704290251}
@@ -3015,6 +3011,9 @@ MonoBehaviour:
   mToggleGroup: {fileID: 1157765198}
   vToggleGroup: {fileID: 1712016894}
   audioSource: {fileID: 129677353}
+  goDialogRoot: {fileID: 593182875}
+  commonDialog: {fileID: 2556041822901053219, guid: 650b983d1d5a0774c890194565e0a3ce,
+    type: 3}
 --- !u!4 &1168239249
 Transform:
   m_ObjectHideFlags: 0

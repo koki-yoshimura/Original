@@ -5,11 +5,11 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour {
 
     public static SaveManager Instance;
-    public static int Shokaititle;
-    public static int Shokaishop;
-    public static int Shokaigasha;
-    public static int Shokaiwepon;
-    public static int Shokaishooting;
+    public static int FirstTitle;
+    public static int FirstShop;
+    public static int FirstGasha;
+    public static int FirstWeapon;
+    public static int FirstShooting;
 
 
     void Awake()
@@ -24,22 +24,22 @@ public class SaveManager : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        GameDirector.savecoin = PlayerPrefs.GetInt("coin");
-        Shokaititle = PlayerPrefs.GetInt("kidokutitle");
-        Shokaishop = PlayerPrefs.GetInt("kidokushop");
-        Shokaigasha = PlayerPrefs.GetInt("kidokugasha");
-        Shokaiwepon = PlayerPrefs.GetInt("kidokuwepon");
-        Shokaishooting = PlayerPrefs.GetInt("kidokushooting");
+        GameDirector.SaveCoin = PlayerPrefs.GetInt("Coin");
+        FirstTitle = PlayerPrefs.GetInt("SecondTitle");
+        FirstShop = PlayerPrefs.GetInt("SecondShop");
+        FirstGasha = PlayerPrefs.GetInt("SecondGasha");
+        FirstWeapon = PlayerPrefs.GetInt("SecondWeapon");
+        FirstShooting = PlayerPrefs.GetInt("SecondShooting");
     }
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("coin", GameDirector.savecoin);
-        PlayerPrefs.SetInt("kidokutitle", Shokaititle);
-        PlayerPrefs.SetInt("kidokushop", Shokaishop);
-        PlayerPrefs.SetInt("kidokugasha", Shokaigasha);
-        PlayerPrefs.SetInt("kidokuwepon", Shokaiwepon);
-        PlayerPrefs.SetInt("kidokushooting", Shokaishooting);
+        PlayerPrefs.SetInt("Coin", GameDirector.SaveCoin);
+        PlayerPrefs.SetInt("SecondTitle", FirstTitle);
+        PlayerPrefs.SetInt("SecondShop", FirstShop);
+        PlayerPrefs.SetInt("SecondGasha", FirstGasha);
+        PlayerPrefs.SetInt("SecondWeapon", FirstWeapon);
+        PlayerPrefs.SetInt("SecondShooting", FirstShooting);
         PlayerPrefs.Save();
     }
 }

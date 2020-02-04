@@ -15,14 +15,14 @@ public class GameDirector : MonoBehaviour {
 
     int coin = 0;
 
-    public static int savecoin = 0;
+    public static int SaveCoin = 0;
 
     int HP = 10;
 
     public void GetCoin()//PlayerがCoinを獲得した時に加算する
     {
         this.coin += 1;
-        savecoin += 1;
+        SaveCoin += 1;
     }
 
     public void Damage()//PlayerがEnemyに当たった時に減算する
