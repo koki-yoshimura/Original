@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour {
@@ -28,10 +26,19 @@ public class TitleController : MonoBehaviour {
         gashaButton.SetActive(true);
         shootingButton.SetActive(true);
 
-            //var dialog = (GameObject)Resources.Load("Prefabs/CommonDialog");
-            commonDialog = Instantiate(commonDialog, goDialogRoot.transform, worldPositionStays: false);
+        //var dialog = (GameObject)Resources.Load("Prefabs/CommonDialog");
+        commonDialog = Instantiate(commonDialog, goDialogRoot.transform, worldPositionStays: false);
 
+        var message = "※こちらは初回のみ表示\n" +
+            "◆Shooting\n" +
+            "シューティングゲームをプレイできます。\n" +
+            "◆Gasha\n" +
+            "Shootingで使えるアイテムが手に入るガシャができます。\n" +
+            "◆Shop\n" +
+            "Shopで使えるアイテムが買えます。";
 
+        // CommonDialogクラス側にSetup()メソッドを用意しておき、毎回テキスト内容を変えられるようにする。
+        commonDialog.Setup(message);
     }
 
     //soubiボタンを押してsoubiシーンに遷移する

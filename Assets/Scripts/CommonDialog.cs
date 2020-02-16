@@ -1,20 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CommonDialog : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Text textMassage = null;
+    /// <summary>
+    /// 初期設定
+    /// </summary>
+    /// <param name="message">メッセージ内容</param>
+    public void Setup(string message)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        textMassage.text = message;
     }
 
     public void XButtonDown()
